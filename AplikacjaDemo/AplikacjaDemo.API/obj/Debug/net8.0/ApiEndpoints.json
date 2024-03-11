@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "AplikacjaDemo.API.Controllers.PrzykladowyController",
+    "Method": "Get",
+    "RelativePath": "api/Przykladowy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AplikacjaDemo.API.Controllers.PrzykladowyController",
+    "Method": "Post",
+    "RelativePath": "api/Przykladowy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AplikacjaDemo.API.Models.PrzykladowyModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
