@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF494FA4-9BBE-4764-999F-EB4D4D55B313}|Quizlo.APP.Server\\Quizlo.APP.Server.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.app.server\\quizlo.app.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{AF494FA4-9BBE-4764-999F-EB4D4D55B313}|Quizlo.APP.Server\\Quizlo.APP.Server.csproj|solutionrelative:quizlo.app.server\\quizlo.app.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\quizlo.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\quizlo.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Quizlo.APP.Server.http",
-              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.APP.Server\\Quizlo.APP.Server.http",
-              "RelativeDocumentMoniker": "Quizlo.APP.Server\\Quizlo.APP.Server.http",
-              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.APP.Server\\Quizlo.APP.Server.http",
-              "RelativeToolTip": "Quizlo.APP.Server\\Quizlo.APP.Server.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-03-20T07:45:34.453Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -36,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quizlo.API.http",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.http",
+              "RelativeDocumentMoniker": "Quizlo.API\\Quizlo.API.http",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.http",
+              "RelativeToolTip": "Quizlo.API\\Quizlo.API.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-20T08:05:14.666Z",
+              "EditorCaption": ""
             }
           ]
         }
