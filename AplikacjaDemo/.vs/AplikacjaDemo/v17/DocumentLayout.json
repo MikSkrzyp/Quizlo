@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\controllers\\przykladowycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\controllers\\przykladowycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\models\\przykladowymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311115343_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AplikacjaDemo.API\\Migrations\\20240311115343_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311115144_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +37,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\aplikacjademo.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\aplikacjademo.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\aplikacjademo\\aplikacjademo.api\\migrations\\20240311115343_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085E8134-4188-491E-A9C4-F96C3F0BF28F}|AplikacjaDemo.API\\AplikacjaDemo.API.csproj|solutionrelative:aplikacjademo.api\\migrations\\20240311115343_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,12 +70,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-11T11:24:36.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:24:36.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "20240311115343_initial.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311115343_initial.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Migrations\\20240311115343_initial.cs",
@@ -83,12 +82,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Migrations\\20240311115343_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:53:44.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:53:44.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "20240311114130_initial 2.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311114130_initial 2.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Migrations\\20240311114130_initial 2.cs",
@@ -96,12 +94,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Migrations\\20240311114130_initial 2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:41:30.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:41:30.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Program.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Program.cs",
@@ -114,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "20240311115144_initial.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311115144_initial.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Migrations\\20240311115144_initial.cs",
@@ -122,12 +119,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Migrations\\20240311115144_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:51:44.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:51:44.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PrzykladowyController.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Controllers\\PrzykladowyController.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Controllers\\PrzykladowyController.cs",
@@ -135,12 +131,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Controllers\\PrzykladowyController.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAYwBUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:34:15.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:34:15.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PrzykladowyModel.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Models\\PrzykladowyModel.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Models\\PrzykladowyModel.cs",
@@ -148,12 +143,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Models\\PrzykladowyModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:29:11.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:29:11.626Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PrzykladoweDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Models\\PrzykladoweDbContext.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Models\\PrzykladoweDbContext.cs",
@@ -161,12 +155,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Models\\PrzykladoweDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:27:27.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:27:27.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "20240311114253_initial 3.cs",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\Migrations\\20240311114253_initial 3.cs",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\Migrations\\20240311114253_initial 3.cs",
@@ -174,12 +167,11 @@
               "RelativeToolTip": "AplikacjaDemo.API\\Migrations\\20240311114253_initial 3.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T11:42:53.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:42:53.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "AplikacjaDemo.API.http",
               "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\AplikacjaDemo\\AplikacjaDemo.API\\AplikacjaDemo.API.http",
               "RelativeDocumentMoniker": "AplikacjaDemo.API\\AplikacjaDemo.API.http",
@@ -187,8 +179,7 @@
               "RelativeToolTip": "AplikacjaDemo.API\\AplikacjaDemo.API.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-03-11T11:24:58.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T11:24:58.577Z"
             }
           ]
         }
