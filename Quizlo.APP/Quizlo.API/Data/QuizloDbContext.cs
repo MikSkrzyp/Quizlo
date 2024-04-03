@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Quizlo.API.Model.Domain;
 
 namespace Quizlo.API.Data
 {
@@ -9,6 +10,11 @@ namespace Quizlo.API.Data
             
         }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        
 
     }
 }
