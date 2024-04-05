@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Quiz Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Include the navbar component -->
+        <navbar></navbar>
+
+        <!-- Login Form -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left side with registration options -->
+                <div class="col-md-6">
+                    <h1>Log in</h1>
+                    <form @submit.prevent="attemptLogin">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input v-model="password" type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Right side with registration options -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <br>
+                        <h6>If you haven't registered yet, please register first.</h6>
+                        <button class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;" @click="register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Include the footer component -->
+        <footer-component></footer-component>
+    </div>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    
+    <!-- Include the navbar component script -->
+    <script src="./components/navbar-component.js"></script>
+
+    <!-- Include the footer component script -->
+    <script src="./components/footer-component.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Start your journey with us',
+                email: '',
+                password: '',
+                loggedIn: false // Flag to track login status
+            },
+            methods: {
+                attemptLogin: function () {
+                    // Check if email and password match predefined credentials
+                    if (this.email === 'user@example.com' && this.password === 'password') {
+                        this.loggedIn = true; // Set logged in status to true
+                        // Redirect to home page or perform any other action
+                        console.log('Login successful');
+                    } else {
+                        // Show error message or perform any other action
+                        console.log('Invalid credentials. Please try again.');
+                    }
+                },
+                register: function () {
+                    // Add your register functionality here
+                    alert('Register clicked');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
