@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Quizlo.API.Data;
+using Quizlo.API.Model.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+builder.Services.AddIdentityCore<User>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<QuizloDbContext>();
+
 
 app.UseHttpsRedirection();
 

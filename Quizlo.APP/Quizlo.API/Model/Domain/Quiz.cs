@@ -16,7 +16,7 @@ namespace Quizlo.API.Model.Domain
         [MaxLength(200)]
         public string Description { get; set; }
 
-        public int CreatorID { get; set; }
+        public string CreatorID { get; set; }
 
         public DateTime DateCreated { get; set; }
 
