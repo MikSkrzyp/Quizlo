@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Quizlo.API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialAuth : Migration
+    public partial class auth : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -220,6 +222,15 @@ namespace Quizlo.API.Migrations
                         principalTable: "Questions",
                         principalColumn: "QuestionID",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "282b4f59-0832-4d5f-af19-4eacb6b7e153", null, "User", "USER" },
+                    { "68ded0a1-148e-40c9-ab88-ba0a4bea351b", null, "Admin", "ADMIN" }
                 });
 
             migrationBuilder.CreateIndex(
