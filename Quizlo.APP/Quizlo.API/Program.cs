@@ -1,7 +1,12 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Quizlo.API.Configurations;
 using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
+using Quizlo.API.Security;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,19 +22,41 @@ builder.Services.AddDbContext<QuizloDbContext>((options) =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("QuizloDb"));
 });
 
-var app = builder.Build();
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
+builder.Services.AddIdentityCore<User>()
+    .AddRoles<IdentityRole>()
+    .AddTokenProvider<DataProtectorTokenProvider<User>>(builder.Configuration["JwtSettings:Issuer"])
+    .AddEntityFrameworkStores<QuizloDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IAuthManager, AuthManager>();
+
+builder.Services.AddAuthentication(o =>
+{
+    o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+        ValidAudience = builder.Configuration["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]))
+    };
+});
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-builder.Services.AddIdentityCore<User>()
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<QuizloDbContext>();
-
 
 app.UseHttpsRedirection();
 
