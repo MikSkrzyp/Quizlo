@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
-using Quizlo.API.DTOs;
 using Quizlo.API.Model.Domain;
+using Quizlo.API.Model.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Quizlo.API.Security
+namespace Quizlo.API.Repositories
 {
     public class AuthManager : IAuthManager
     {
@@ -66,7 +66,7 @@ namespace Quizlo.API.Security
 
             var result = await _userManager.CreateAsync(_user, userDto.Password);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(_user, "User");
             }

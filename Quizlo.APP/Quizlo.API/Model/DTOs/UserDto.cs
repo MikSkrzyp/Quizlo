@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Quizlo.API.DTOs;
+namespace Quizlo.API.Model.DTOs;
 
 public class UserDto
 {
     [Required]
     public string FirstName { get; set; }
-    
+
     [Required]
     public string LastName { get; set; }
 

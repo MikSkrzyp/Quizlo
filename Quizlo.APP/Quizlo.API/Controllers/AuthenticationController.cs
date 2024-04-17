@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Quizlo.API.DTOs;
-using Quizlo.API.Security;
+using Quizlo.API.Model.DTOs;
+using Quizlo.API.Repositories;
 
 namespace Quizlo.API.Controllers
 {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Quizlo.API.DTOs;
 using Quizlo.API.Model.Domain;
+using Quizlo.API.Model.DTOs;
 
 namespace Quizlo.API.Configurations;
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Quizlo.API.Model.Configurations;
+using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
 
 namespace Quizlo.API.Data

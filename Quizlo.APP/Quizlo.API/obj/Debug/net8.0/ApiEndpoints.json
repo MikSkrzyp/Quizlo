@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "loginDTO",
-        "Type": "Quizlo.API.DTOs.LoginDto",
+        "Type": "Quizlo.API.Model.DTOs.LoginDto",
         "IsRequired": true
       }
     ],
@@ -45,7 +45,7 @@
     "Parameters": [
       {
         "Name": "tokenDTO",
-        "Type": "Quizlo.API.DTOs.TokenDto",
+        "Type": "Quizlo.API.Model.DTOs.TokenDto",
         "IsRequired": true
       }
     ],
@@ -81,7 +81,7 @@
     "Parameters": [
       {
         "Name": "userDTO",
-        "Type": "Quizlo.API.DTOs.UserDto",
+        "Type": "Quizlo.API.Model.DTOs.UserDto",
         "IsRequired": true
       }
     ],

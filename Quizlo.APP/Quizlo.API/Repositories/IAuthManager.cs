@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Quizlo.API.DTOs;
+using Quizlo.API.Model.DTOs;
 
-namespace Quizlo.API.Security
+namespace Quizlo.API.Repositories
 {
     public interface IAuthManager
     {

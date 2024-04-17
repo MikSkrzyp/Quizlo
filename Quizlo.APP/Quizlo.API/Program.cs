@@ -6,7 +6,7 @@ using Microsoft.OpenApi.Models;
 using Quizlo.API.Configurations;
 using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
-using Quizlo.API.Security;
+using Quizlo.API.Repositories;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

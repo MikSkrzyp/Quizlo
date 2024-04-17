@@ -1,4 +1,4 @@
-﻿namespace Quizlo.API.DTOs;
+﻿namespace Quizlo.API.Model.DTOs;
 
 public class TokenDto
 {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Quizlo.API.Model.Configurations
+namespace Quizlo.API.Data
 {
     public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
     {
@@ -11,13 +11,13 @@ namespace Quizlo.API.Model.Configurations
             builder.HasData(
                 new IdentityRole
                 {
-      
+
                     Name = "Admin",
                     NormalizedName = "ADMIN"
                 },
                 new IdentityRole
                 {
-                   
+
                     Name = "User",
                     NormalizedName = "USER"
                 }
