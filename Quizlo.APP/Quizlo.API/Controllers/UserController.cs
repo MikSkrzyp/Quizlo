@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
+using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
 
 namespace Quizlo.API.Controllers

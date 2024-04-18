@@ -60,8 +60,13 @@ builder.Services.AddIdentityCore<User>()
     .AddEntityFrameworkStores<QuizloDbContext>()
     .AddDefaultTokenProviders();
 
+
+
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
+builder.Services.AddScoped<IQuizRepository,SQLQuizRepository>();
+
+
 
 builder.Services.AddAuthentication(o =>
 {

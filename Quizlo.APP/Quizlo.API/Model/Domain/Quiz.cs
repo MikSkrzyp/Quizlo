@@ -18,10 +18,15 @@ namespace Quizlo.API.Model.Domain
 
         public string CreatorID { get; set; }
 
+        //public string UserFirstName { get; set; }
+
         public DateTime DateCreated { get; set; }
 
         [ForeignKey(nameof(CreatorID))]
         public User Creator { get; set; }
+
+        
+       // public User User { get; set; }
 
     }
 }

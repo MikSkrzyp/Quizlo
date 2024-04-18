@@ -128,6 +128,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Quizlo.API.Controllers.QuizController",
+    "Method": "Create",
+    "RelativePath": "api/Quiz",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createQuizDto",
+        "Type": "Quizlo.API.Model.DTOs.CreateQuizDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Quizlo.API.Controllers.QuizController",
+    "Method": "GetAll",
+    "RelativePath": "api/Quiz",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Quizlo.API.Controllers.UserController",
     "Method": "GetAll",
     "RelativePath": "api/User",
