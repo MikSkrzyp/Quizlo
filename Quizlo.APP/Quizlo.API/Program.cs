@@ -61,6 +61,7 @@ builder.Services.AddIdentityCore<User>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IAuthManager, AuthManager>();
+builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
 
 builder.Services.AddAuthentication(o =>
 {

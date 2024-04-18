@@ -15,6 +15,7 @@ public class MapperConfig : Profile
         CreateMap<Question, QuestionCreateDto>().ReverseMap();
         CreateMap<Answer, AnswerCreateDto>().ReverseMap();*/
         CreateMap<UserDto, User>().ReverseMap();
+        CreateMap<User,GetUserDTO>().ReverseMap();
 
     }
     
