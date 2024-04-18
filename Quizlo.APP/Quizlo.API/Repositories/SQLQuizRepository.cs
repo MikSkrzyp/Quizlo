@@ -22,7 +22,7 @@ namespace Quizlo.API.Repositories
 
         public async Task<List<Quiz>> GetAllAsync()
         {
-            return await dbContext.Quizzes.ToListAsync();
+            return await dbContext.Quizzes.Include("Creator").ToListAsync();
         }
     }
 }
