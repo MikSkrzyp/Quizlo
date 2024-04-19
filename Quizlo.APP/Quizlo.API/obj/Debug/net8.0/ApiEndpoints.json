@@ -130,7 +130,7 @@
   {
     "ContainingType": "Quizlo.API.Controllers.QuizController",
     "Method": "Create",
-    "RelativePath": "api/Quiz",
+    "RelativePath": "api/Quiz/CreateOneQuiz",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -145,8 +145,24 @@
   },
   {
     "ContainingType": "Quizlo.API.Controllers.QuizController",
+    "Method": "Delete",
+    "RelativePath": "api/Quiz/DeleteOneQuiz/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Quizlo.API.Controllers.QuizController",
     "Method": "GetAll",
-    "RelativePath": "api/Quiz",
+    "RelativePath": "api/Quiz/ReadAllQuizzes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -156,7 +172,7 @@
   {
     "ContainingType": "Quizlo.API.Controllers.QuizController",
     "Method": "GetById",
-    "RelativePath": "api/Quiz/{id}",
+    "RelativePath": "api/Quiz/ReadOneQuiz/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -172,7 +188,7 @@
   {
     "ContainingType": "Quizlo.API.Controllers.QuizController",
     "Method": "Update",
-    "RelativePath": "api/Quiz/{id}",
+    "RelativePath": "api/Quiz/UpdateOneQuiz/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -191,36 +207,10 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Quizlo.API.Controllers.QuizController",
+    "ContainingType": "Quizlo.API.Controllers.UserController",
     "Method": "Delete",
-    "RelativePath": "api/Quiz/{id}",
+    "RelativePath": "api/User/DeleteOneUser/{id}",
     "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Quizlo.API.Controllers.UserController",
-    "Method": "GetAll",
-    "RelativePath": "api/User",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Quizlo.API.Controllers.UserController",
-    "Method": "GetById",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -234,9 +224,19 @@
   },
   {
     "ContainingType": "Quizlo.API.Controllers.UserController",
-    "Method": "Delete",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "DELETE",
+    "Method": "GetAll",
+    "RelativePath": "api/User/ReadAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Quizlo.API.Controllers.UserController",
+    "Method": "GetById",
+    "RelativePath": "api/User/ReadOneUser/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

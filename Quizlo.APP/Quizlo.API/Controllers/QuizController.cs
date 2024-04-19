@@ -25,6 +25,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpPost]
+        [Route("CreateOneQuiz")]
         public async Task<IActionResult> Create([FromBody] CreateQuizDto createQuizDto)
         {
             var quizDomain = mapper.Map<Quiz>(createQuizDto);
@@ -33,6 +34,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpGet]
+        [Route("ReadAllQuizzes")]
         public async Task<IActionResult> GetAll()
         {
             var quizDomain = await quizRepository.GetAllAsync();
@@ -40,7 +42,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("ReadOneQuiz/{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var quizDomain = await quizRepository.GetByIdAsync(id);
@@ -53,7 +55,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpPut]
-        [Route("{id:int}")]
+        [Route("UpdateOneQuiz/{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, UpdateQuizDTO updateQuizDTO)
         {
             var quizDomain = mapper.Map<Quiz>(updateQuizDTO);
@@ -67,7 +69,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:int}")]
+        [Route("DeleteOneQuiz/{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var quizDomain = await quizRepository.DeleteAsync(id);

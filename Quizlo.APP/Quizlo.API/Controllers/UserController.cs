@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Data;
@@ -24,6 +25,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpGet]
+        [Route("ReadAllUsers")]
         public async Task<IActionResult> GetAll()
         {
             var usersDomain = await userRepository.GetAllAsync();
@@ -31,7 +33,7 @@ namespace Quizlo.API.Controllers
             return Ok(mapper.Map<List<GetUserDTO>>(usersDomain));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("ReadOneUser/{id}")]
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
             var userDomain = await userRepository.GetByIdAsync(id);
@@ -43,7 +45,7 @@ namespace Quizlo.API.Controllers
             return Ok(mapper.Map<GetUserDTO>(userDomain));
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteOneUser/{id}")]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
             var userDomain = await userRepository.DeleteAsync(id);
