@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Data;
@@ -36,6 +37,45 @@ namespace Quizlo.API.Controllers
         {
             var quizDomain = await quizRepository.GetAllAsync();
             return Ok(mapper.Map<List<GetQuizDTO>>(quizDomain));
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int id)
+        {
+            var quizDomain = await quizRepository.GetByIdAsync(id);
+            if (quizDomain == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(mapper.Map<GetQuizDTO>(quizDomain));
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public async Task<IActionResult> Update([FromRoute] int id, UpdateQuizDTO updateQuizDTO)
+        {
+            var quizDomain = mapper.Map<Quiz>(updateQuizDTO);
+
+            quizDomain = await quizRepository.UpadteAsync(id, quizDomain);
+            if (quizDomain == null)
+            {
+                return NotFound();
+            }
+            return Ok("Updated");
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var quizDomain = await quizRepository.DeleteAsync(id);
+            if (quizDomain == null)
+            {
+                return NotFound();
+            }
+            return Ok("Deleted");
         }
 
 

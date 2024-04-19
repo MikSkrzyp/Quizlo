@@ -18,6 +18,7 @@ public class MapperConfig : Profile
         CreateMap<User,GetUserDTO>().ReverseMap();
         CreateMap<CreateQuizDto,Quiz>().ReverseMap();
         CreateMap<Quiz,GetQuizDTO>().ReverseMap();
+        CreateMap<UpdateQuizDTO,Quiz>().ReverseMap();
 
     }
     
