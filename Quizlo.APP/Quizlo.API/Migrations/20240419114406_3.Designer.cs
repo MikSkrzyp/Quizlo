@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quizlo.API.Data;
 
@@ -11,9 +12,11 @@ using Quizlo.API.Data;
 namespace Quizlo.API.Migrations
 {
     [DbContext(typeof(QuizloDbContext))]
-    partial class QuizloDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240419114406_3")]
+    partial class _3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

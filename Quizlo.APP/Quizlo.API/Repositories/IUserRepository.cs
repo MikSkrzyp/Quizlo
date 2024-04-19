@@ -6,5 +6,9 @@ namespace Quizlo.API.Repositories
     {
 
         Task<List<User>> GetAllAsync();
+
+        Task<User> DeleteAsync(string id);
+
+        Task<User> GetByIdAsync(string id);
     }
 }

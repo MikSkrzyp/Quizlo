@@ -29,5 +29,28 @@ namespace Quizlo.API.Controllers
             var usersDomain = await userRepository.GetAllAsync();
             return Ok(mapper.Map<List<GetUserDTO>>(usersDomain));
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById([FromRoute] string id)
+        {
+            var userDomain = await userRepository.GetByIdAsync(id);
+            if (userDomain == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(mapper.Map<GetUserDTO>(userDomain));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] string id)
+        {
+            var userDomain = await userRepository.DeleteAsync(id);
+            if (userDomain == null)
+            {
+                return NotFound();
+            }
+            return Ok("Deleted");
+        }
     }
 }
