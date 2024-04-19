@@ -27,6 +27,7 @@ namespace Quizlo.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             var usersDomain = await userRepository.GetAllAsync();
+            //throw new Exception("blad");
             return Ok(mapper.Map<List<GetUserDTO>>(usersDomain));
         }
 

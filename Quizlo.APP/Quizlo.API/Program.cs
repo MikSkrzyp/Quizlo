@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Quizlo.API.Configurations;
 using Quizlo.API.Data;
+using Quizlo.API.Middlewares;
 using Quizlo.API.Model.Domain;
 using Quizlo.API.Repositories;
 using System.Text;
@@ -96,6 +97,9 @@ if (app.Environment.IsDevelopment())
 
 /*app.UseAuthentication();
 app.UseAuthorization();*/
+
+app.UseMiddleware<GlobalExceptionHandling>();
+
 
 app.UseHttpsRedirection();
 
