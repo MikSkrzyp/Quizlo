@@ -1,4 +1,9 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace Quizlo.API.Middlewares
 {
@@ -23,16 +28,23 @@ namespace Quizlo.API.Middlewares
             {
                 logger.LogError(ex, ex.Message);
 
-                httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 httpContext.Response.ContentType = "application/json";
 
+                
+                var statusCode = (int)HttpStatusCode.InternalServerError;
+
+                
                 var error = new
                 {
-
+                    StatusCode = statusCode,
                     ErrorMessage = "Towarzyszu, wykryliśmy błąd. Postaramy się go jak najszybciej naprawić. Bywaj!"
-
                 };
-                await httpContext.Response.WriteAsJsonAsync(error);
+
+                
+                httpContext.Response.StatusCode = statusCode;
+
+               
+                await httpContext.Response.WriteAsync(JsonSerializer.Serialize(error));
             }
         }
     }
