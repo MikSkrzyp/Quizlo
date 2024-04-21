@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
 using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
+using System.Security.Claims;
 
 namespace Quizlo.API.Controllers
 {
@@ -28,7 +30,13 @@ namespace Quizlo.API.Controllers
         [Route("CreateOneQuiz")]
         public async Task<IActionResult> Create([FromBody] CreateQuizDto createQuizDto)
         {
+            // //get currenr user id
+            // var userId = User.FindFirstValue("uid");
+            // createQuizDto.CreatorID = userId;
+
             var quizDomain = mapper.Map<Quiz>(createQuizDto);
+            quizDomain.DateCreated = DateTime.Now;
+            quizDomain.CreatorID = User.FindFirstValue("uid");
             await quizRepository.CreateAsync(quizDomain);
             return Ok(quizDomain.QuizID);
         }
