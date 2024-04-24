@@ -67,7 +67,7 @@ namespace Quizlo.API.Controllers
         public async Task<IActionResult> Update([FromRoute] int id, UpdateQuizDTO updateQuizDTO)
         {
             var quizDomain = mapper.Map<Quiz>(updateQuizDTO);
-
+           
             quizDomain = await quizRepository.UpadteAsync(id, quizDomain);
             if (quizDomain == null)
             {
