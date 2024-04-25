@@ -66,6 +66,7 @@ builder.Services.AddIdentityCore<User>()
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
 builder.Services.AddScoped<IQuizRepository,SQLQuizRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 
 
 

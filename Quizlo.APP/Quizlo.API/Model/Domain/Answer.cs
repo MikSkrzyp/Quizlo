@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Quizlo.API.Model.Domain
 {
@@ -17,6 +18,8 @@ namespace Quizlo.API.Model.Domain
         public bool IsCorrect { get; set; }
 
         [ForeignKey(nameof(QuestionID))]
+        [JsonIgnore]
         public Question Question { get; set; }
+
     }
 }
