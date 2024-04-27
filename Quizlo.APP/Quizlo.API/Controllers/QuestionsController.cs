@@ -32,8 +32,11 @@ namespace Quizlo.API.Controllers
 
                 QuizID = questionDTO.QuizID,
                 QuestionText = questionDTO.QuestionText,
-                QuestionType = questionDTO.QuestionType
+                QuestionType = questionDTO.QuestionType,
+                
             };
+
+            
 
             foreach (var answerDto in questionDTO.Answers)
             {
@@ -95,10 +98,7 @@ namespace Quizlo.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutQuestion(int id, [FromBody] QuestionDTO questionDTO)
         {
-            if (id != questionDTO.QuizID)
-            {
-                return BadRequest("Question ID mismatch");
-            }
+           
 
             var questionToUpdate = await _questionRepository.GetQuestionByIdAsync(id);
 
