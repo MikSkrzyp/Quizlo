@@ -52,8 +52,8 @@ namespace Quizlo.API.Repositories
             }
             quiz_from_db.Title = quiz.Title;
             quiz_from_db.Description = quiz.Description;
-            quiz_from_db.CreatorID = quiz.CreatorID;
-            quiz_from_db.DateCreated = quiz.DateCreated;
+            //quiz_from_db.CreatorID = quiz.CreatorID;
+            //quiz_from_db.DateCreated = quiz.DateCreated;
 
             await dbContext.SaveChangesAsync();
             return quiz_from_db;

@@ -1,33 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\",
+  "WorkspaceRootPath": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\olaps\\onedrive\\pulpit\\quizloo--kopia\\quizlo\\quizlo.app\\quizlo.api\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\model\\dtos\\updatequizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\dtos\\updatequizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\quizlo.api\\repositories\\iquestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\repositories\\iquestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\olaps\\onedrive\\pulpit\\quizloo--kopia\\quizlo\\quizlo.app\\quizlo.api\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\quizlo.api\\model\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\olaps\\onedrive\\pulpit\\quizloo--kopia\\quizlo\\quizlo.app\\quizlo.api\\model\\domain\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\domain\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\olaps\\onedrive\\pulpit\\quizloo--kopia\\quizlo\\quizlo.app\\quizlo.api\\model\\dtos\\questionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\model\\dtos\\questionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\dtos\\questionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\quizlo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\repositories\\sqlquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\repositories\\sqlquizrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\model\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\model\\domain\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\domain\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\repositories\\iquestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\repositories\\iquestionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\model\\domain\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\model\\domain\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|c:\\users\\mikolaj_2\\desktop\\quizlo\\quizlo.app\\quizlo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D38B7C-DDC7-4382-9F1E-2161A816D843}|Quizlo.API\\Quizlo.API.csproj|solutionrelative:quizlo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -41,64 +61,135 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Quiz.cs",
+              "RelativeDocumentMoniker": "Quizlo.API\\Model\\Domain\\Quiz.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Quiz.cs",
+              "RelativeToolTip": "Quizlo.API\\Model\\Domain\\Quiz.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T12:09:01.118Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SQLQuizRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\SQLQuizRepository.cs",
+              "RelativeDocumentMoniker": "Quizlo.API\\Repositories\\SQLQuizRepository.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\SQLQuizRepository.cs",
+              "RelativeToolTip": "Quizlo.API\\Repositories\\SQLQuizRepository.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T12:07:11.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateQuizDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\UpdateQuizDTO.cs",
+              "RelativeDocumentMoniker": "Quizlo.API\\Model\\DTOs\\UpdateQuizDTO.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\UpdateQuizDTO.cs",
+              "RelativeToolTip": "Quizlo.API\\Model\\DTOs\\UpdateQuizDTO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T12:06:36.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "Quizlo.API\\Controllers\\QuizController.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "Quizlo.API\\Controllers\\QuizController.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T12:05:45.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Quizlo.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\appsettings.json",
+              "RelativeToolTip": "Quizlo.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-27T11:59:27.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "QuestionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\QuestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\QuestionRepository.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Repositories\\QuestionRepository.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\QuestionRepository.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\QuestionRepository.cs",
               "RelativeToolTip": "Quizlo.API\\Repositories\\QuestionRepository.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAA7wDYAAAAAAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T09:00:12.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Question.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Question.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Model\\Domain\\Question.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Question.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Question.cs",
               "RelativeToolTip": "Quizlo.API\\Model\\Domain\\Question.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAUAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T08:48:58.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Answer.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Answer.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Answer.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Model\\Domain\\Answer.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Answer.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\Domain\\Answer.cs",
               "RelativeToolTip": "Quizlo.API\\Model\\Domain\\Answer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T09:47:58.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T09:47:58.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "IQuestionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\IQuestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\IQuestionRepository.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Repositories\\IQuestionRepository.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\IQuestionRepository.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Repositories\\IQuestionRepository.cs",
               "RelativeToolTip": "Quizlo.API\\Repositories\\IQuestionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T09:00:33.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T09:00:33.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "QuestionsController.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuestionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuestionsController.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Controllers\\QuestionsController.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuestionsController.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Controllers\\QuestionsController.cs",
               "RelativeToolTip": "Quizlo.API\\Controllers\\QuestionsController.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAYwIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,11 +198,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "QuestionRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
               "RelativeToolTip": "Quizlo.API\\Model\\DTOs\\QuestionRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -120,16 +211,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Program.cs",
               "RelativeDocumentMoniker": "Quizlo.API\\Program.cs",
-              "ToolTip": "C:\\Users\\olaps\\OneDrive\\Pulpit\\quizloo--kopia\\Quizlo\\Quizlo.APP\\Quizlo.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Program.cs",
               "RelativeToolTip": "Quizlo.API\\Program.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAAAEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:02:24.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T14:02:24.561Z"
             }
           ]
         }
