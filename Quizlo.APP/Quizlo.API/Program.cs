@@ -8,11 +8,20 @@ using Quizlo.API.Data;
 using Quizlo.API.Middlewares;
 using Quizlo.API.Model.Domain;
 using Quizlo.API.Repositories;
+using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/QuizloBackendAppLogs.txt", rollingInterval: RollingInterval.Day)
+    .MinimumLevel.Information()
+    .CreateLogger()
+     );
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

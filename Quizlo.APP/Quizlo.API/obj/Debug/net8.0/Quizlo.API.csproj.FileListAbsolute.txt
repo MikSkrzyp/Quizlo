@@ -469,3 +469,12 @@ C:\Users\olaps\OneDrive\Pulpit\quizloo--kopia\Quizlo\Quizlo.APP\Quizlo.API\obj\D
 C:\Users\olaps\OneDrive\Pulpit\quizloo--kopia\Quizlo\Quizlo.APP\Quizlo.API\obj\Debug\net8.0\Quizlo.API.pdb
 C:\Users\olaps\OneDrive\Pulpit\quizloo--kopia\Quizlo\Quizlo.APP\Quizlo.API\obj\Debug\net8.0\Quizlo.API.genruntimeconfig.cache
 C:\Users\olaps\OneDrive\Pulpit\quizloo--kopia\Quizlo\Quizlo.APP\Quizlo.API\obj\Debug\net8.0\ref\Quizlo.API.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
