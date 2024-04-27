@@ -49,7 +49,8 @@ namespace Quizlo.API.Repositories
 
         public async Task<Question> GetQuestionByIdAsync(int questionId)
         {
-            return await _context.Questions.FindAsync(questionId);
+            return await _context.Questions.Include("Answers").
+                FirstOrDefaultAsync(id => id.QuestionID == questionId);
         }
 
 
