@@ -1,21 +1,23 @@
 <script setup>
 import { ref } from 'vue';
+import { useAuthStore } from '../stores/users'
+import { useRouter } from 'vue-router'
 
+
+const auth = useAuthStore()
 const email = ref('');
 const password = ref('');
-const loggedIn = ref(false);
+const router = useRouter()
 
-const attemptLogin = () => {
-  if (email.value === 'user@example.com' && password.value === 'password') {
-    loggedIn.value = true;
-    console.log('Login successful');
-  } else {
-    console.log('Invalid credentials. Please try again.');
+const attemptLogin = async () => {
+  const success = await auth.login({ email: email.value, password: password.value });
+  if (success) {
+    await router.push('/')
   }
 };
 
-const register = () => {
-  alert('Register clicked');
+const register = async () => {
+  await auth.register({ email: email.value, password: password.value });
 };
 </script>
 
@@ -35,6 +37,7 @@ const register = () => {
             <input v-model="password" type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <button type="submit" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Submit</button>
+          <p v-if="auth.error" class="text-danger">{{ auth.error }}</p>
         </form>
       </div>
       <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">

@@ -55,6 +55,16 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5173")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
 
 
 builder.Services.AddDbContext<QuizloDbContext>((options) =>
@@ -109,6 +119,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();*/
 
 app.UseMiddleware<GlobalExceptionHandling>();
+
+app.UseCors("AllowSpecificOrigin");
 
 
 app.UseHttpsRedirection();
