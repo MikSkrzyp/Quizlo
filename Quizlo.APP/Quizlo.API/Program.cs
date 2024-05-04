@@ -56,6 +56,11 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
+
 
 builder.Services.AddDbContext<QuizloDbContext>((options) =>
 {
@@ -112,6 +117,8 @@ app.UseMiddleware<GlobalExceptionHandling>();
 
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
