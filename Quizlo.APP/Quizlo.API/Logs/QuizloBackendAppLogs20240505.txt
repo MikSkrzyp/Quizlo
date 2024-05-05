@@ -2002,3 +2002,644 @@ INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
 2024-05-05 11:59:30.483 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 12.0187ms
 2024-05-05 11:59:30.484 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
 2024-05-05 11:59:30.485 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 20.8981ms
+2024-05-05 16:11:06.922 +02:00 [INF] User profile is available. Using 'C:\Users\Mikolaj_2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-05 16:11:07.201 +02:00 [INF] Now listening on: https://localhost:7244
+2024-05-05 16:11:07.203 +02:00 [INF] Now listening on: http://localhost:5280
+2024-05-05 16:11:07.254 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-05 16:11:07.256 +02:00 [INF] Hosting environment: Development
+2024-05-05 16:11:07.257 +02:00 [INF] Content root path: C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API
+2024-05-05 16:11:08.073 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - null null
+2024-05-05 16:11:08.462 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - 200 null text/html;charset=utf-8 396.0437ms
+2024-05-05 16:11:08.472 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-05 16:11:08.485 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 13.2176ms
+2024-05-05 16:11:08.503 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/_vs/browserLink - null null
+2024-05-05 16:11:08.601 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.9317ms
+2024-05-05 16:11:08.693 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - null null
+2024-05-05 16:11:08.931 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 238.2771ms
+2024-05-05 16:11:29.094 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:11:29.386 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:11:29.394 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:29.421 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:11:31.439 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:11:31.453 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:11:31.458 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:31.462 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:11:31.680 +02:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:11:31.680 +02:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:11:31.904 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:11:31.904 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:11:31.943 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 471.0952ms
+2024-05-05 16:11:31.943 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 2515.8546ms
+2024-05-05 16:11:31.947 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:31.949 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:31.962 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 499 null application/json; charset=utf-8 2868.1655ms
+2024-05-05 16:11:31.962 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 523.2154ms
+2024-05-05 16:11:32.046 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:11:32.053 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:11:32.055 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:32.058 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:11:32.135 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:11:32.142 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:11:32.149 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 86.6471ms
+2024-05-05 16:11:32.152 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:32.155 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 109.2954ms
+2024-05-05 16:11:34.028 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - null null
+2024-05-05 16:11:34.035 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:11:34.037 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:11:34.054 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 16:11:34.193 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 16:11:34.232 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:11:34.240 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 181.7245ms
+2024-05-05 16:11:34.244 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:11:34.247 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 221.3978ms
+2024-05-05 16:11:37.280 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:11:37.287 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:11:37.293 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:37.296 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:11:37.307 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:11:37.314 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:11:37.323 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 23.1196ms
+2024-05-05 16:11:37.327 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:11:37.330 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 50.101ms
+2024-05-05 16:12:18.662 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - null null
+2024-05-05 16:12:18.668 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:12:18.672 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - 204 null null 9.7056ms
+2024-05-05 16:12:18.676 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - application/json 43
+2024-05-05 16:12:18.761 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:12:18'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-05-05 16:12:18.790 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:12:18'.
+2024-05-05 16:12:18.792 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:12:18.794 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:12:18.801 +02:00 [INF] Route matched with {action = "Create", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Quizlo.API.Model.DTOs.CreateQuizDto) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:12:18.987 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([CreatorID], [DateCreated], [Description], [Title])
+OUTPUT INSERTED.[QuizID]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-05 16:12:19.027 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Quizlo.API.Data.QuizloDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-05 16:12:19.173 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Create (Quizlo.API) in 368.5317ms
+2024-05-05 16:12:19.178 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:12:19.286 +02:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Quizlo.API.Repositories.SQLQuizRepository.CreateAsync(Quiz quiz) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Repositories\SQLQuizRepository.cs:line 19
+   at Quizlo.API.Controllers.QuizController.Create(CreateQuizDto createQuizDto) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Controllers\QuizController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Quizlo.API.Middlewares.GlobalExceptionHandling.InvokeAsync(HttpContext httpContext) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Middlewares\GlobalExceptionHandling.cs:line 25
+2024-05-05 16:12:19.353 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - 500 null application/json 677.3293ms
+2024-05-05 16:12:28.311 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - null null
+2024-05-05 16:12:28.316 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:12:28.318 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - 204 null null 7.0136ms
+2024-05-05 16:12:28.320 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - application/json 43
+2024-05-05 16:12:28.329 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:12:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-05-05 16:12:28.333 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:12:28'.
+2024-05-05 16:12:28.335 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:12:28.336 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:12:28.338 +02:00 [INF] Route matched with {action = "Create", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Quizlo.API.Model.DTOs.CreateQuizDto) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:12:28.364 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([CreatorID], [DateCreated], [Description], [Title])
+OUTPUT INSERTED.[QuizID]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-05 16:12:28.373 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Quizlo.API.Data.QuizloDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-05 16:12:28.447 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Create (Quizlo.API) in 105.8915ms
+2024-05-05 16:12:28.450 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:12:28.511 +02:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Quizlo.API.Repositories.SQLQuizRepository.CreateAsync(Quiz quiz) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Repositories\SQLQuizRepository.cs:line 19
+   at Quizlo.API.Controllers.QuizController.Create(CreateQuizDto createQuizDto) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Controllers\QuizController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Quizlo.API.Middlewares.GlobalExceptionHandling.InvokeAsync(HttpContext httpContext) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Middlewares\GlobalExceptionHandling.cs:line 25
+2024-05-05 16:12:28.531 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - 500 null application/json 211.311ms
+2024-05-05 16:13:27.318 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - null null
+2024-05-05 16:13:27.349 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:13:27.350 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - 204 null null 33.3134ms
+2024-05-05 16:13:27.354 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - application/json 43
+2024-05-05 16:13:27.361 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:13:27'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-05-05 16:13:27.364 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:13:27'.
+2024-05-05 16:13:27.366 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:13:27.368 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:13:27.370 +02:00 [INF] Route matched with {action = "Create", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Quizlo.API.Model.DTOs.CreateQuizDto) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:13:27.379 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([CreatorID], [DateCreated], [Description], [Title])
+OUTPUT INSERTED.[QuizID]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-05 16:13:27.390 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Quizlo.API.Data.QuizloDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-05 16:13:27.495 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Create (Quizlo.API) in 121.5084ms
+2024-05-05 16:13:27.498 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:13:27.558 +02:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatorID', table 'QuizloDb.dbo.Quizzes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:07f54abd-2fdf-41e9-a7db-8ab1af65ce8f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Quizlo.API.Repositories.SQLQuizRepository.CreateAsync(Quiz quiz) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Repositories\SQLQuizRepository.cs:line 19
+   at Quizlo.API.Controllers.QuizController.Create(CreateQuizDto createQuizDto) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Controllers\QuizController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Quizlo.API.Middlewares.GlobalExceptionHandling.InvokeAsync(HttpContext httpContext) in C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API\Middlewares\GlobalExceptionHandling.cs:line 25
+2024-05-05 16:13:27.577 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - 500 null application/json 223.9005ms
+2024-05-05 16:14:00.107 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - null null
+2024-05-05 16:14:00.117 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:00.118 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - 204 null null 12.2835ms
+2024-05-05 16:14:00.123 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 49
+2024-05-05 16:14:00.137 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:14:00'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-05-05 16:14:00.141 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 13:58:20', Current time (UTC): '05.05.2024 14:14:00'.
+2024-05-05 16:14:00.143 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:00.145 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 16:14:00.151 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 16:14:00.203 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 16:14:00.348 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-05 16:14:00.373 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-05-05 16:14:00.418 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 16:14:00.470 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 16:14:00.543 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p19='?' (Size = 450), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p20='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+OUTPUT 1
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [NormalizedEmail] = @p11, [NormalizedUserName] = @p12, [PasswordHash] = @p13, [PhoneNumber] = @p14, [PhoneNumberConfirmed] = @p15, [SecurityStamp] = @p16, [TwoFactorEnabled] = @p17, [UserName] = @p18
+OUTPUT 1
+WHERE [Id] = @p19 AND [ConcurrencyStamp] = @p20;
+2024-05-05 16:14:00.584 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 16:14:00.597 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 16:14:00.614 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p20='?' (Size = 450), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p21='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p4, [ConcurrencyStamp] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FirstName] = @p8, [LastName] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-05-05 16:14:00.623 +02:00 [INF] Executing OkObjectResult, writing value of type 'Quizlo.API.Model.DTOs.TokenDto'.
+2024-05-05 16:14:00.627 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 472.6855ms
+2024-05-05 16:14:00.630 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 16:14:00.633 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 200 null application/json; charset=utf-8 510.6136ms
+2024-05-05 16:14:00.666 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:14:00.673 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:00.676 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:00.678 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:14:00.690 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:14:00.696 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:00.701 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 18.6023ms
+2024-05-05 16:14:00.703 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:00.705 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 39.1937ms
+2024-05-05 16:14:03.030 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - null null
+2024-05-05 16:14:03.035 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:03.036 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - 204 null null 6.7282ms
+2024-05-05 16:14:03.042 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - application/json 43
+2024-05-05 16:14:03.062 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:03.064 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:14:03.066 +02:00 [INF] Route matched with {action = "Create", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Quizlo.API.Model.DTOs.CreateQuizDto) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:14:03.077 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([CreatorID], [DateCreated], [Description], [Title])
+OUTPUT INSERTED.[QuizID]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-05 16:14:03.096 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-05-05 16:14:03.101 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Create (Quizlo.API) in 31.4855ms
+2024-05-05 16:14:03.104 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 16:14:03.106 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - 200 null application/json; charset=utf-8 66.7648ms
+2024-05-05 16:14:03.114 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Questions - null null
+2024-05-05 16:14:03.118 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:03.119 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Questions - 204 null null 6.4892ms
+2024-05-05 16:14:03.123 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Questions - application/json 155
+2024-05-05 16:14:03.130 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:03.132 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API)'
+2024-05-05 16:14:03.137 +02:00 [INF] Route matched with {action = "PostQuestion", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostQuestion(Quizlo.API.Model.DTOs.QuestionDTO) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 16:14:03.177 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 200), @p1='?' (Size = 50), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Questions] ([QuestionText], [QuestionType], [QuizID])
+OUTPUT INSERTED.[QuestionID]
+VALUES (@p0, @p1, @p2);
+2024-05-05 16:14:03.198 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@p3='?' (Size = 100), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (Size = 100), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Answers] USING (
+VALUES (@p3, @p4, @p5, 0),
+(@p6, @p7, @p8, 1)) AS i ([AnswerText], [IsCorrect], [QuestionID], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AnswerText], [IsCorrect], [QuestionID])
+VALUES (i.[AnswerText], i.[IsCorrect], i.[QuestionID])
+OUTPUT INSERTED.[AnswerID], i._Position;
+2024-05-05 16:14:03.206 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Quizlo.API.Model.Domain.Question'.
+2024-05-05 16:14:03.231 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API) in 90.86ms
+2024-05-05 16:14:03.235 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API)'
+2024-05-05 16:14:03.237 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Questions - 201 null application/json; charset=utf-8 114.0558ms
+2024-05-05 16:14:03.242 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Questions - application/json 184
+2024-05-05 16:14:03.247 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:03.249 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API)'
+2024-05-05 16:14:03.251 +02:00 [INF] Route matched with {action = "PostQuestion", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostQuestion(Quizlo.API.Model.DTOs.QuestionDTO) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 16:14:03.260 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 200), @p1='?' (Size = 50), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Questions] ([QuestionText], [QuestionType], [QuizID])
+OUTPUT INSERTED.[QuestionID]
+VALUES (@p0, @p1, @p2);
+2024-05-05 16:14:03.266 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (Size = 100), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (Size = 100), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Answers] USING (
+VALUES (@p3, @p4, @p5, 0),
+(@p6, @p7, @p8, 1)) AS i ([AnswerText], [IsCorrect], [QuestionID], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AnswerText], [IsCorrect], [QuestionID])
+VALUES (i.[AnswerText], i.[IsCorrect], i.[QuestionID])
+OUTPUT INSERTED.[AnswerID], i._Position;
+2024-05-05 16:14:03.271 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Quizlo.API.Model.Domain.Question'.
+2024-05-05 16:14:03.274 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API) in 20.2478ms
+2024-05-05 16:14:03.276 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.PostQuestion (Quizlo.API)'
+2024-05-05 16:14:03.278 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Questions - 201 null application/json; charset=utf-8 35.8424ms
+2024-05-05 16:14:04.783 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:14:04.790 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:04.792 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:04.794 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:14:04.803 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:14:04.809 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:04.813 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 15.7964ms
+2024-05-05 16:14:04.815 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:04.817 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 33.9124ms
+2024-05-05 16:14:06.401 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - null null
+2024-05-05 16:14:06.407 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:06.412 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:14:06.415 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 16:14:06.427 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 16:14:06.432 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:06.435 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 16.4134ms
+2024-05-05 16:14:06.438 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:14:06.440 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 39.1112ms
+2024-05-05 16:14:09.852 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:14:09.859 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:09.861 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:09.863 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:14:09.871 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:14:09.879 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:09.882 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 15.7264ms
+2024-05-05 16:14:09.885 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:09.887 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 35.2845ms
+2024-05-05 16:14:11.727 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - null null
+2024-05-05 16:14:11.735 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:11.736 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:14:11.738 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 16:14:11.747 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 16:14:11.753 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:11.755 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 13.9567ms
+2024-05-05 16:14:11.759 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 16:14:11.761 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 35.2712ms
+2024-05-05 16:14:15.240 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 16:14:15.247 +02:00 [INF] CORS policy execution successful.
+2024-05-05 16:14:15.248 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:15.250 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 16:14:15.258 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 16:14:15.263 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 16:14:15.267 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 13.7021ms
+2024-05-05 16:14:15.269 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 16:14:15.271 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 31.0406ms

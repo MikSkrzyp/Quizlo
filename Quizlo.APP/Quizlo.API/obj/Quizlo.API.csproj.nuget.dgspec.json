@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\goska\\Desktop\\Quizloooooo\\jwtVueFinal\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj": {}
+    "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\goska\\Desktop\\Quizloooooo\\jwtVueFinal\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj": {
+    "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\goska\\Desktop\\Quizloooooo\\jwtVueFinal\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
+        "projectUniqueName": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
         "projectName": "Quizlo.API",
-        "projectPath": "C:\\Users\\goska\\Desktop\\Quizloooooo\\jwtVueFinal\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
-        "packagesPath": "C:\\Users\\goska\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\goska\\Desktop\\Quizloooooo\\jwtVueFinal\\Quizlo\\Quizlo.APP\\Quizlo.API\\obj\\",
+        "projectPath": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
+        "packagesPath": "C:\\Users\\Mikolaj_2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikolaj_2\\Desktop\\Quizlo\\Quizlo.APP\\Quizlo.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\goska\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mikolaj_2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -117,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
