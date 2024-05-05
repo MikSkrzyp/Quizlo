@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "js-cookie": "^3.0.5",
     "pinia": "^2.1.7",
+    "popper.js": "^1.16.1",
     "vue": "^3.4.26",
     "vue-router": "^4.3.2",
     "vue3-toastify": "^0.2.1"

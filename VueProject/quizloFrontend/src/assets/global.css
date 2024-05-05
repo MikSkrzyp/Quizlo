@@ -2,3 +2,7 @@ body.dark-mode {
   background-color: #333;
   color: #fff;
 }
+body {
+  background-color: #dfdfdf; /* Light gray */
+}
+
