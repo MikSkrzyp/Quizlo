@@ -5,10 +5,28 @@ import Register from '../views/Register.vue' // Import the Register component
 import AboutUs from '../views/AboutUs.vue'
 import QuizView from "@/views/QuizView.vue";
 import PostQuiz from "@/views/PostQuiz.vue"; // Import the AboutUs component
+import HomePage from "@/views/HomePage.vue";
+import DeleteQuiz from "@/views/DeleteQuiz.vue";
+import PutQuiz from "@/views/PutQuiz.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+        {
+            path: '/deleteQuiz',
+            name:'deleteQuiz',
+            component:DeleteQuiz
+        },
+        {
+            path: '/updateQuiz',
+            name:'updateQuiz',
+            component:PutQuiz
+        },
+        {
+            path: '/homePage',
+            name: 'HomePage',
+            component: HomePage
+        },
         {
             path: '/',
             name: 'quizes',

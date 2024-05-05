@@ -1,11 +1,11 @@
 <template>
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #3C89AA;">
     <div class="container">
-      <router-link class="navbar-brand" to="/">
+      <router-link class="navbar-brand" to="/homePage">
         <!-- Large logo for desktop -->
-        <img v-if="isDesktop" src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 90px; height: auto;">
+        <img v-if="isDesktop" src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 120px; height: auto;">
         <!-- Small logo for tablet and phone -->
-        <img v-else src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 60px; height: auto;">
+        <img v-else src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 80px; height: auto;">
       </router-link>
       <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,8 @@
       <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
 
       <div class="navbar-nav ms-auto">
-          <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
+        <router-link  to="/homePage" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
+          <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Quizzes</router-link>
           <routerLink to="/aboutUs" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">About Us</routerLink>
           <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
           <!-- Dark mode toggle button -->
