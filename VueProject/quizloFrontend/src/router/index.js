@@ -8,7 +8,7 @@ import PostQuiz from "@/views/PostQuiz.vue"; // Import the AboutUs component
 import HomePage from "@/views/HomePage.vue";
 import DeleteQuiz from "@/views/DeleteQuiz.vue";
 import PutQuiz from "@/views/PutQuiz.vue";
-
+import UsersList from "@/views/UsersList.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -58,6 +58,11 @@ const router = createRouter({
             path: '/updateQuiz',
             name:'updateQuiz',
             component:PutQuiz
+        },
+        {
+            path: '/users',
+            name:'users',
+            component:UsersList
         }
 
     ]
