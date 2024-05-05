@@ -3,7 +3,8 @@ import QuizzesView from '../views/QuizzesView.vue'
 import Login from '../views/Login.vue' // Import the Login component
 import Register from '../views/Register.vue' // Import the Register component
 import AboutUs from '../views/AboutUs.vue'
-import QuizView from "@/views/QuizView.vue"; // Import the AboutUs component
+import QuizView from "@/views/QuizView.vue";
+import PostQuiz from "@/views/PostQuiz.vue"; // Import the AboutUs component
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
             name: 'quizId',
             component: QuizView
 
+        },
+        {
+            path: '/postQuiz',
+            name:'postQuiz',
+            component:PostQuiz
         }
     ]
 })
