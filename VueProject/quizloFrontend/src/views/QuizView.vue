@@ -47,7 +47,7 @@ const onOptionSelected = (isCorrect) => {
     :barPercentage="barPercentage"
   />
 
-    <Question
+    <Question style="display: flex;justify-content: center"
       v-if="!showResults"
       :question="questions[currentQuestionIndex]"
       @selectOption="onOptionSelected"
