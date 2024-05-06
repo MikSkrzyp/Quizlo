@@ -51,13 +51,13 @@ namespace Quizlo.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "10c0e0d2-1d75-4c3d-b455-50e2d270299c",
+                            Id = "admin-role-id",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "73e90cc7-d356-4826-93b1-0f8ed8528c82",
+                            Id = "user-role-id",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -148,6 +148,13 @@ namespace Quizlo.API.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "admin-user-id",
+                            RoleId = "admin-role-id"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -326,6 +333,26 @@ namespace Quizlo.API.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "admin-user-id",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "310ed3e4-8352-48ed-b078-776839fd0003",
+                            Email = "admin@admin.com",
+                            EmailConfirmed = true,
+                            FirstName = "Admin",
+                            LastName = "User",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@ADMIN.COM",
+                            NormalizedUserName = "ADMIN@ADMIN.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOqTc60kFtXYRz7jIBwqlithkCiTkP4tONLhd40h5ghVJVA0W2Lwqr3Tc0qScuxvug==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "2efb6766-a524-4b73-80d1-cc2a8384f7a1",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@admin.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -382,7 +409,7 @@ namespace Quizlo.API.Migrations
             modelBuilder.Entity("Quizlo.API.Model.Domain.Answer", b =>
                 {
                     b.HasOne("Quizlo.API.Model.Domain.Question", "Question")
-                        .WithMany()
+                        .WithMany("Answers")
                         .HasForeignKey("QuestionID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -410,6 +437,11 @@ namespace Quizlo.API.Migrations
                         .IsRequired();
 
                     b.Navigation("Creator");
+                });
+
+            modelBuilder.Entity("Quizlo.API.Model.Domain.Question", b =>
+                {
+                    b.Navigation("Answers");
                 });
 #pragma warning restore 612, 618
         }
