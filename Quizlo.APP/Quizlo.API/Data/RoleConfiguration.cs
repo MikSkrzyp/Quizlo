@@ -1,27 +1,24 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
-namespace Quizlo.API.Data
+public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
 {
-    public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
+    public void Configure(EntityTypeBuilder<IdentityRole> builder)
     {
-        public void Configure(EntityTypeBuilder<IdentityRole> builder)
-        {
-            builder.HasData(
-                new IdentityRole
-                {
-
-                    Name = "Admin",
-                    NormalizedName = "ADMIN"
-                },
-                new IdentityRole
-                {
-
-                    Name = "User",
-                    NormalizedName = "USER"
-                }
-                );
-        }
+        builder.HasData(
+            new IdentityRole
+            {
+                Id = "admin-role-id", // Fixed ID for the Admin role
+                Name = "Admin",
+                NormalizedName = "ADMIN"
+            },
+            new IdentityRole
+            {
+                Id = "user-role-id", // Fixed ID for the User role
+                Name = "User",
+                NormalizedName = "USER"
+            }
+        );
     }
 }

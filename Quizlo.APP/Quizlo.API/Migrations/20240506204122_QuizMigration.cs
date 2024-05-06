@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Quizlo.API.Migrations
 {
     /// <inheritdoc />
-    public partial class auth : Migration
+    public partial class QuizMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -229,9 +229,19 @@ namespace Quizlo.API.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "282b4f59-0832-4d5f-af19-4eacb6b7e153", null, "User", "USER" },
-                    { "68ded0a1-148e-40c9-ab88-ba0a4bea351b", null, "Admin", "ADMIN" }
+                    { "admin-role-id", null, "Admin", "ADMIN" },
+                    { "user-role-id", null, "User", "USER" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "admin-user-id", 0, "310ed3e4-8352-48ed-b078-776839fd0003", "admin@admin.com", true, "Admin", "User", false, null, "ADMIN@ADMIN.COM", "ADMIN@ADMIN.COM", "AQAAAAIAAYagAAAAEOqTc60kFtXYRz7jIBwqlithkCiTkP4tONLhd40h5ghVJVA0W2Lwqr3Tc0qScuxvug==", null, false, "2efb6766-a524-4b73-80d1-cc2a8384f7a1", false, "admin@admin.com" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "admin-role-id", "admin-user-id" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Answers_QuestionID",

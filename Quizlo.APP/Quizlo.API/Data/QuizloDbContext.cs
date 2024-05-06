@@ -13,9 +13,14 @@ namespace Quizlo.API.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
+
+           
+           // modelBuilder.Entity<User>().ToTable("AspNetUsers");
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
-                                                         
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
+            
         }
 
         public DbSet<User> Users { get; set; }

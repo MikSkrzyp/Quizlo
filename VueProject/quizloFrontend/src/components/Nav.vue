@@ -13,11 +13,16 @@
         </button>
         <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
           <div class="navbar-nav ms-auto">
-            <router-link  to="/users" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Users</router-link>
+            <router-link v-if="authStore.isAuthenticated && authStore.userRole==='Admin'" to="/users" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Users</router-link>
             <router-link  to="/homePage" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
             <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Quizzes</router-link>
             <router-link to="/aboutUs" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">About Us</router-link>
-            <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
+            <template v-if="authStore.isAuthenticated">
+              <router-link to="/login" @click="logOut" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log out</router-link>
+            </template>
+            <template v-else>
+              <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
+            </template>
             <!-- Dark mode toggle button -->
             <button type="button" class="btn btn-outline-light" @click="toggleDarkMode">{{ darkModeText }}</button>
           </div>
@@ -33,6 +38,10 @@
 </template>
 
 <script setup>
+
+import {useAuthStore} from "@/stores/users.js";
+
+const authStore = useAuthStore();
 import { ref, computed } from 'vue';
 
 const isDesktop = ref(window.innerWidth >= 992);
@@ -41,6 +50,7 @@ const darkMode = ref(localStorage.getItem('darkMode') === 'true');
 
 const darkModeText = computed(() => darkMode.value ? 'Light Mode' : 'Dark Mode');
 
+
 const toggleNavbar = () => {
   isNavbarOpen.value = !isNavbarOpen.value;
 };
@@ -48,6 +58,10 @@ const toggleNavbar = () => {
 const toggleDarkMode = () => {
   darkMode.value = !darkMode.value;
   setDarkMode();
+};
+
+const logOut = () => {
+  authStore.logOut();
 };
 
 const setDarkMode = () => {
