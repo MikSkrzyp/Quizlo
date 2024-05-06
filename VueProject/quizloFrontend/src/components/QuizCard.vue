@@ -13,8 +13,9 @@ const navigateToQuiz = () => {
 
 <template>
 <div @click="navigateToQuiz">
-  <h2>{{quiz.title}}</h2>
+  <h1>{{quiz.title}}</h1>
   <h2>{{quiz.description}}</h2>
+  <h7>quiz id:{{quiz.quizID}}</h7>
 </div>
   <br/>
 </template>
@@ -23,4 +24,5 @@ const navigateToQuiz = () => {
 h2{
   font-size: 20px;
 }
+
 </style>

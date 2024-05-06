@@ -14,7 +14,7 @@ const emitSelectedOption = (isCorrect) => {
     <h1 class="question">
       {{question.questionText}}
     </h1>
-    <h1>{{question.questionType}}</h1>
+    <h4>{{question.questionType}}</h4>
     <div
         v-for="answer in question.answers"
         :key="answer.answerID"
@@ -26,5 +26,8 @@ const emitSelectedOption = (isCorrect) => {
 </template>
 
 <style scoped>
-
+.question-container {
+  margin: auto;
+  text-align: center;
+}
 </style>

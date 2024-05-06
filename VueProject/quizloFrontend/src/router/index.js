@@ -55,7 +55,7 @@ const router = createRouter({
             component:DeleteQuiz
         },
         {
-            path: '/updateQuiz',
+            path: '/updateQuiz/:id',
             name:'updateQuiz',
             component:PutQuiz
         },

@@ -1,28 +1,34 @@
 <template>
-  <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #3C89AA;">
-    <div class="container">
-      <router-link class="navbar-brand" to="/homePage">
-        <!-- Large logo for desktop -->
-        <img v-if="isDesktop" src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 120px; height: auto;">
-        <!-- Small logo for tablet and phone -->
-        <img v-else src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 80px; height: auto;">
-      </router-link>
-      <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
-
-      <div class="navbar-nav ms-auto">
-        <router-link  to="/homePage" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
-          <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Quizzes</router-link>
-          <routerLink to="/aboutUs" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">About Us</routerLink>
-          <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
-          <!-- Dark mode toggle button -->
-          <button type="button" class="btn btn-outline-light" @click="toggleDarkMode">{{ darkModeText }}</button>
+  <div>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #3C89AA; margin-top: 0; width: 100%;">
+      <div class="container-fluid">
+        <router-link class="navbar-brand" to="/homePage">
+          <!-- Large logo for desktop -->
+          <img v-if="isDesktop" src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 120px; height: auto;">
+          <!-- Small logo for tablet and phone -->
+          <img v-else src="../images/quizlo-logo.png" id="quizlo-logo" alt="Quizlo Logo" style="width: 80px; height: auto;">
+        </router-link>
+        <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <router-link  to="/homePage" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
+            <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Quizzes</router-link>
+            <router-link to="/aboutUs" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">About Us</router-link>
+            <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
+            <!-- Dark mode toggle button -->
+            <button type="button" class="btn btn-outline-light" @click="toggleDarkMode">{{ darkModeText }}</button>
+          </div>
         </div>
       </div>
+    </nav>
+
+    <!-- Add padding to the top of the content area -->
+    <div style="padding-top: 80px;">
+      <!-- Your content here -->
     </div>
-  </nav>
+  </div>
 </template>
 
 <script setup>
@@ -61,20 +67,21 @@ setDarkMode();
 </script>
 
 <style scoped>
-@media (max-width: 991.98px) {
-  .navbar-nav.ms-auto {
-    margin-top: 40px; /* Adjust the margin-top value as needed */
-  }
+/* Add padding to create space between navbar and content below */
+.navbar {
+  padding-bottom: 20px; /* Adjust as needed */
 }
+
 .btn-outline-light:hover {
   background-color: #fff;
   color: #3C89AA;
 }
+
 .custom-btn {
   transition: transform 0.3s ease;
 }
+
 .custom-btn:hover {
   transform: scale(1.1);
 }
-
 </style>

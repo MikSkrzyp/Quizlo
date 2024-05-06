@@ -1,8 +1,18 @@
 <template>
-  <div class="quiz-list">
-    <h1>Quizzes</h1>
+  <div>
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="fancy-font mx-auto">Quizzes</h1>
+      <router-link to="/PostQuiz" class="btn btn-light custom-btn" style="background-color: #60A1BC; color: white; border: none; margin-right: 20px;">Create Quiz</router-link>
+    </div>
+    <br>
     <div class="options-container">
-      <QuizCard v-for="(quiz, index) in quizzes" :key="quiz.id" :quiz="quiz"/>
+      <div class="quiz-card" v-for="quiz in quizzes" :key="quiz.id">
+        <QuizCard :quiz="quiz"/>
+        <div class="bottom-text-container">
+          <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)">Update</a></p>
+          <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -11,55 +21,83 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import QuizCard from "@/components/QuizCard.vue";
+import { useRouter } from 'vue-router';
+
 
 export default {
-  components: {QuizCard},
+  components: { QuizCard },
+
   setup() {
     const quizzes = ref([]);
-
-    onMounted(async () => {
+    const router = useRouter();
+    const fetchQuizzes = async () => {
       try {
         const response = await axios.get('https://localhost:7244/api/Quiz/ReadAllQuizzes');
         quizzes.value = response.data;
       } catch (error) {
-        console.error(error);
+        console.error('Failed to fetch quizzes:', error);
+        alert('Failed to fetch quizzes. Please try again.');
       }
-    });
+    };
 
+    const deleteQuiz = async (quizId) => {
+      if (!confirm('Are you sure you want to delete this quiz?')) return;
+
+      try {
+        await axios.delete(`https://localhost:7244/api/Quiz/DeleteOneQuiz/${quizId}`);
+        quizzes.value = quizzes.value.filter(quiz => quiz.id !== quizId);
+        alert('Quiz successfully deleted!');
+      } catch (error) {
+        console.error('Failed to delete the quiz:', error);
+        alert('Failed to delete the quiz. Please try again.');
+      }
+    };
+    const updateQuiz = (quizId) => {
+      // Navigate to the updateQuiz route with the quiz ID parameter
+      router.push({ name: 'updateQuiz', params: { id: quizId } });
+    };
+    onMounted(fetchQuizzes);
 
     return {
       quizzes,
+      deleteQuiz,
+      updateQuiz
     };
   },
 };
 </script>
 
 <style scoped>
-.quiz-list {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f7f7f7;
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.quiz-card {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #ffffff;
   border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  padding: 20px;
 }
 
-.quiz-list h1 {
-  margin-top: 0;
+.fancy-font {
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 30px;
+  color: #3C89AA;
 }
 
-.quiz-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.bottom-text-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.quiz-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.quiz-list li:last-child {
-  border-bottom: none;
+.bottom-text {
+  margin-left: 10px;
+  color: #167ac1;
 }
 </style>
