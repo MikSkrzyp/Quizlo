@@ -17,7 +17,12 @@
             <router-link  to="/homePage" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Home Page</router-link>
             <router-link  to="/" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Quizzes</router-link>
             <router-link to="/aboutUs" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">About Us</router-link>
-            <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
+            <template v-if="authStore.isAuthenticated">
+              <router-link to="/login" @click="logOut" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log out</router-link>
+            </template>
+            <template v-else>
+              <router-link to="/login" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Log in / Register</router-link>
+            </template>
             <!-- Dark mode toggle button -->
             <button type="button" class="btn btn-outline-light" @click="toggleDarkMode">{{ darkModeText }}</button>
           </div>
@@ -53,6 +58,10 @@ const toggleNavbar = () => {
 const toggleDarkMode = () => {
   darkMode.value = !darkMode.value;
   setDarkMode();
+};
+
+const logOut = () => {
+  authStore.logOut();
 };
 
 const setDarkMode = () => {

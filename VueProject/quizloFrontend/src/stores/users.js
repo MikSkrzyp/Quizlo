@@ -26,7 +26,7 @@ export const useAuthStore = defineStore({
       this.token = token
       Cookies.set('token', token)
       if (token) {
-        this.user = jwtDecode(token) // Decode the token and store the user info
+        this.user = jwtDecode(token)
       } else {
         this.user = null
       }
@@ -62,6 +62,8 @@ export const useAuthStore = defineStore({
         return false
       }
     },
-    // ... other actions ...
+    logOut() {
+      this.clearToken()
+    },
   },
 })
