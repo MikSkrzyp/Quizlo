@@ -7,9 +7,11 @@
     <br>
     <div class="options-container">
       <div class="row">
-        <div class="col-4" v-for="quiz in quizzes" :key="quiz.id">
+        <div class="col-lg-4 col-md-6 col-sm-12" v-for="quiz in quizzes" :key="quiz.id">
           <div class="quiz-card">
-            <QuizCard :quiz="quiz"/>
+            <div class="quiz-card-content">
+              <QuizCard :quiz="quiz"/>
+            </div>
             <div class="bottom-text-container">
               <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)" :style="{ color: '#46a8f3', cursor: 'pointer' }">Update</a></p>
               <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
@@ -28,7 +30,7 @@ import QuizCard from "@/components/QuizCard.vue";
 import { useRouter } from 'vue-router';
 
 export default {
-  components: { QuizCard },
+  components: {QuizCard},
 
   setup() {
     const quizzes = ref([]);
@@ -60,7 +62,7 @@ export default {
 
     const updateQuiz = (quizId) => {
       // Navigate to the updateQuiz route with the quiz ID parameter
-      router.push({ name: 'updateQuiz', params: { id: quizId } });
+      router.push({name: 'updateQuiz', params: {id: quizId}});
     };
 
     onMounted(fetchQuizzes);
@@ -80,11 +82,18 @@ export default {
 }
 
 .quiz-card {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange child elements vertically */
+  height: 100%; /* Ensure each card takes full height */
   margin-bottom: 20px;
   background-color: rgba(195, 195, 195, 0.92);
   border: 1px solid #ddd;
   border-radius: 14px;
   padding: 20px;
+}
+
+.quiz-card-content {
+  flex-grow: 1; /* Allow content to grow within the card */
 }
 
 .fancy-font {
