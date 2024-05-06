@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex justify-content-between align-items-center">
       <h1 class="fancy-font mx-auto">Quizzes</h1>
-      <router-link to="/PostQuiz" class="btn btn-light custom-btn" style="background-color: #60A1BC; color: white; border: none; margin-right: 20px;">Create Quiz</router-link>
+      <router-link v-if="authStore.isAuthenticated && authStore.userRole==='Admin'"  to="/PostQuiz" class="btn btn-light custom-btn" style="background-color: #60A1BC; color: white; border: none; margin-right: 20px;">Create Quiz</router-link>
     </div>
     <br>
     <div class="options-container">
@@ -10,7 +10,7 @@
         <div class="col-4" v-for="quiz in quizzes" :key="quiz.id">
           <div class="quiz-card">
             <QuizCard :quiz="quiz"/>
-            <div class="bottom-text-container">
+            <div v-if="authStore.isAuthenticated && authStore.userRole==='Admin'" class="bottom-text-container">
               <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)" :style="{ color: '#46a8f3', cursor: 'pointer' }">Update</a></p>
               <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
             </div>
@@ -26,6 +26,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import QuizCard from "@/components/QuizCard.vue";
 import { useRouter } from 'vue-router';
+import {useAuthStore} from "@/stores/users.js";
 
 export default {
   components: { QuizCard },
@@ -33,6 +34,7 @@ export default {
   setup() {
     const quizzes = ref([]);
     const router = useRouter();
+    const authStore = useAuthStore();
 
     const fetchQuizzes = async () => {
       try {
@@ -68,7 +70,8 @@ export default {
     return {
       quizzes,
       deleteQuiz,
-      updateQuiz
+      updateQuiz,
+      authStore
     };
   },
 };

@@ -1,26 +1,40 @@
 import { defineStore } from 'pinia'
 import Cookies from 'js-cookie'
 import axios from './axios'
+import {jwtDecode} from 'jwt-decode'
 
 export const useAuthStore = defineStore({
   id: 'auth',
   state: () => ({
     token: Cookies.get('token') || null,
     error: null,
+    user: null, // Add this line
   }),
   getters: {
     isAuthenticated(state) {
       return !!state.token
+    },
+    userName(state) {
+      return state.user ? state.user.name : null
+    },
+    userRole(state) {
+      return state.user ? state.user['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] : null
     },
   },
   actions: {
     setToken(token) {
       this.token = token
       Cookies.set('token', token)
+      if (token) {
+        this.user = jwtDecode(token) // Decode the token and store the user info
+      } else {
+        this.user = null
+      }
     },
     clearToken() {
       this.token = null
       Cookies.remove('token')
+      this.user = null
     },
     async login(credentials) {
       try {
