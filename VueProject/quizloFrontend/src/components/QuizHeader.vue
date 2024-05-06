@@ -13,9 +13,9 @@ const {
 <template>
     <header>
         <h4>Question {{questionStatus}}</h4>
-        <div class="bar">
-            <div class="completion" :style="{width: barPercentage}"></div>
-        </div>
+<!--        <div class="bar">-->
+<!--            <div class="completion" :style="{width: barPercentage}"></div>-->
+<!--        </div>-->
     </header>
 </template>
 

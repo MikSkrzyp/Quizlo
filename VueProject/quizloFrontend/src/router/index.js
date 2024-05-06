@@ -49,11 +49,11 @@ const router = createRouter({
             name:'postQuiz',
             component:PostQuiz
         },
-        {
-            path: '/deleteQuiz',
-            name:'deleteQuiz',
-            component:DeleteQuiz
-        },
+        // {
+        //     path: '/deleteQuiz',
+        //     name:'deleteQuiz',
+        //     component:DeleteQuiz
+        // },
         {
             path: '/updateQuiz/:id',
             name:'updateQuiz',

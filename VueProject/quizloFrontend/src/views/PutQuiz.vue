@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from '../stores/axios.js';
 
 export default {
   data() {
@@ -48,14 +48,25 @@ export default {
   methods: {
     async fetchQuestions() {
       try {
-        const quizId = this.$route.params.id;
+        const quizId = this.$route.params.id; // Assuming you are using Vue Router to handle routing
         const response = await axios.get(`https://localhost:7244/api/Questions/quiz/${quizId}/Question/GetAllQuestionsById`);
         this.questions = response.data;
-        this.loaded = true;
-        this.quizId = quizId; // Set the quizId retrieved from route params
+        this.fetchQuizDetails(quizId); // Fetch quiz details when questions are successfully fetched
       } catch (error) {
         console.error('Failed to fetch questions:', error);
         alert('Failed to load data.');
+        this.loaded = false;
+      }
+    },
+    async fetchQuizDetails(quizId) {
+      try {
+        const response = await axios.get(`https://localhost:7244/api/Quiz/ReadOneQuiz/${quizId}`);
+        this.quiz.title = response.data.title;
+        this.quiz.description = response.data.description;
+        this.loaded = true; // Set loaded to true once all data is fetched
+      } catch (error) {
+        console.error('Failed to fetch quiz details:', error);
+        alert('Failed to load quiz details.');
         this.loaded = false;
       }
     },
@@ -73,20 +84,21 @@ export default {
     },
     async updateQuiz() {
       try {
+        const quizId = this.$route.params.id
         const quizData = {
           title: this.quiz.title,
           description: this.quiz.description
         };
-        await axios.put(`https://localhost:7244/api/Quiz/UpdateOneQuiz/${this.quizId}`, quizData);
+        await axios.put(`https://localhost:7244/api/Quiz/UpdateOneQuiz/${quizId}`, quizData);
         console.log('Quiz updated successfully!');
       } catch (error) {
         console.error('Failed to update quiz:', error);
-        alert('Failed to update quiz.');
       }
     },
     async updateQuestion(question) {
+      const quizId = this.$route.params.id
       const questionData = {
-        quizID: this.quizId,
+        quizID: quizId,
         questionText: question.questionText,
         questionType: question.questionType,
         answers: question.answers.map(a => ({
@@ -108,3 +120,4 @@ export default {
   }
 };
 </script>
+

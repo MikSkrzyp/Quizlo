@@ -4248,3 +4248,1263 @@ INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
 2024-05-05 21:50:38.114 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 17.102ms
 2024-05-05 21:50:38.117 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
 2024-05-05 21:50:38.126 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 44.9042ms
+2024-05-05 22:01:19.187 +02:00 [INF] User profile is available. Using 'C:\Users\Mikolaj_2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-05 22:01:19.426 +02:00 [INF] Now listening on: https://localhost:7244
+2024-05-05 22:01:19.428 +02:00 [INF] Now listening on: http://localhost:5280
+2024-05-05 22:01:19.487 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-05 22:01:19.488 +02:00 [INF] Hosting environment: Development
+2024-05-05 22:01:19.489 +02:00 [INF] Content root path: C:\Users\Mikolaj_2\Desktop\Quizlo\Quizlo.APP\Quizlo.API
+2024-05-05 22:01:20.311 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - null null
+2024-05-05 22:01:20.775 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - 200 null text/html;charset=utf-8 470.9854ms
+2024-05-05 22:01:20.818 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/_vs/browserLink - null null
+2024-05-05 22:01:20.818 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-05 22:01:20.871 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 52.798ms
+2024-05-05 22:01:20.928 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.821ms
+2024-05-05 22:01:20.997 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - null null
+2024-05-05 22:01:21.169 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.201ms
+2024-05-05 22:01:35.846 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:01:35.862 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:01:35.875 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:01:35.907 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:01:37.347 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:01:37.482 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:01:37.519 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 1603.1224ms
+2024-05-05 22:01:37.523 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:01:37.539 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 1693.31ms
+2024-05-05 22:01:39.326 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - null null
+2024-05-05 22:01:39.332 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:01:39.334 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:01:39.345 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:01:39.477 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:01:39.501 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:01:39.505 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 157.4119ms
+2024-05-05 22:01:39.507 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:01:39.509 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 183.5096ms
+2024-05-05 22:01:40.580 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:01:40.588 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:01:40.589 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:01:40.590 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:01:40.637 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:01:40.642 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:01:40.644 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 51.2487ms
+2024-05-05 22:01:40.645 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:01:40.646 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 66.5244ms
+2024-05-05 22:02:28.624 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:02:28.641 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:02:28.643 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:02:28.649 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:02:28.672 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:02:28.680 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:02:28.684 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 32.0154ms
+2024-05-05 22:02:28.686 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:02:28.687 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 63.8685ms
+2024-05-05 22:05:16.474 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:05:16.481 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:05:16.483 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:05:16.484 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:05:16.505 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:05:16.509 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:05:16.510 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 24.2147ms
+2024-05-05 22:05:16.512 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:05:16.513 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 39.9871ms
+2024-05-05 22:06:31.388 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:06:31.397 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:06:31.398 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:06:31.400 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:06:31.414 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:06:31.419 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:06:31.421 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 19.0948ms
+2024-05-05 22:06:31.423 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:06:31.425 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 37.2737ms
+2024-05-05 22:06:44.732 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:06:44.734 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:06:44.735 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:06:44.741 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:06:44.744 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:06:44.746 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.0015ms
+2024-05-05 22:06:44.748 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:06:44.750 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 18.099ms
+2024-05-05 22:06:49.905 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:06:49.908 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:06:49.909 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:06:49.910 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:06:49.919 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:06:49.923 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:06:49.925 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 12.4428ms
+2024-05-05 22:06:49.927 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:06:49.928 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 23.3055ms
+2024-05-05 22:14:51.581 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:14:51.588 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:14:51.590 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 8.8054ms
+2024-05-05 22:14:51.593 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 93
+2024-05-05 22:14:51.597 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:14:51.598 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:14:51.602 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:14:51.794 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:14:51.883 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-05-05 22:14:51.906 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:14:51.930 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-05-05 22:14:51.936 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:14:51.948 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:14:51.979 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-05-05 22:14:51.996 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-05-05 22:14:51.997 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 393.1649ms
+2024-05-05 22:14:51.999 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:14:52.000 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 200 0 null 407.3147ms
+2024-05-05 22:15:00.044 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:15:00.047 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:00.048 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 4.6034ms
+2024-05-05 22:15:00.051 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 93
+2024-05-05 22:15:00.054 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:00.055 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:00.056 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:15:00.116 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:15:00.125 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:15:00.129 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 71.0303ms
+2024-05-05 22:15:00.131 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:00.132 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 81.4314ms
+2024-05-05 22:15:00.512 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 93
+2024-05-05 22:15:00.516 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:00.517 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:00.519 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:15:00.579 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:15:00.583 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:15:00.584 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 63.5908ms
+2024-05-05 22:15:00.586 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:00.587 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 74.6892ms
+2024-05-05 22:15:02.971 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 93
+2024-05-05 22:15:02.975 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:02.976 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:02.977 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:15:03.034 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:15:03.037 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:15:03.038 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 59.0523ms
+2024-05-05 22:15:03.040 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:15:03.041 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 70.6225ms
+2024-05-05 22:15:08.672 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:15:08.675 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:08.677 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:15:08.678 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:15:08.684 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:15:08.688 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:15:08.690 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.6221ms
+2024-05-05 22:15:08.692 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:15:08.694 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 22.0733ms
+2024-05-05 22:15:27.766 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - null null
+2024-05-05 22:15:27.771 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:27.772 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - 204 null null 6.6842ms
+2024-05-05 22:15:27.777 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 51
+2024-05-05 22:15:27.835 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 19:29:53', Current time (UTC): '05.05.2024 20:15:27'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-05-05 22:15:27.904 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '05.05.2024 19:29:53', Current time (UTC): '05.05.2024 20:15:27'.
+2024-05-05 22:15:27.905 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:27.906 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:15:27.910 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:15:27.929 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:15:28.003 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-05 22:15:28.016 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-05-05 22:15:28.033 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 22:15:28.039 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:15:28.047 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-05-05 22:15:28.055 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 22:15:28.068 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:15:28.077 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p20='?' (Size = 450), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p21='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p4, [ConcurrencyStamp] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FirstName] = @p8, [LastName] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-05-05 22:15:28.080 +02:00 [INF] Executing OkObjectResult, writing value of type 'Quizlo.API.Model.DTOs.TokenDto'.
+2024-05-05 22:15:28.083 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 170.718ms
+2024-05-05 22:15:28.084 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:15:28.086 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 200 null application/json; charset=utf-8 309.3ms
+2024-05-05 22:15:28.176 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:15:28.179 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:15:28.180 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:15:28.181 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:15:28.192 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:15:28.194 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:15:28.196 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 13.0589ms
+2024-05-05 22:15:28.198 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:15:28.199 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 23.2578ms
+2024-05-05 22:15:43.575 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:15:43.578 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:15:43.579 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:15:43.584 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:15:43.587 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:15:43.589 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 7.9236ms
+2024-05-05 22:15:43.591 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:15:43.592 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 17.4664ms
+2024-05-05 22:16:09.306 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - null null
+2024-05-05 22:16:09.312 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:09.313 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/CreateOneQuiz - 204 null null 6.3574ms
+2024-05-05 22:16:09.315 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - application/json 47
+2024-05-05 22:16:09.329 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:09.330 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 22:16:09.333 +02:00 [INF] Route matched with {action = "Create", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Quizlo.API.Model.DTOs.CreateQuizDto) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:09.364 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 200), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([CreatorID], [DateCreated], [Description], [Title])
+OUTPUT INSERTED.[QuizID]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-05 22:16:09.375 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-05-05 22:16:09.379 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Create (Quizlo.API) in 43.5353ms
+2024-05-05 22:16:09.380 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Create (Quizlo.API)'
+2024-05-05 22:16:09.381 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Quiz/CreateOneQuiz - 200 null application/json; charset=utf-8 66.4036ms
+2024-05-05 22:16:11.613 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:16:11.616 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:11.617 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:11.618 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:11.623 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:16:11.626 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:16:11.628 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 8.1519ms
+2024-05-05 22:16:11.629 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:11.631 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 17.8237ms
+2024-05-05 22:16:16.072 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - null null
+2024-05-05 22:16:16.075 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:16.076 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:16.077 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:16:16.085 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:16:16.090 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:16.099 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 20.2721ms
+2024-05-05 22:16:16.101 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:16.102 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - 404 null application/problem+json; charset=utf-8 31.6692ms
+2024-05-05 22:16:20.153 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:16:20.156 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:20.157 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:20.159 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:20.163 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:16:20.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:16:20.169 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 8.0753ms
+2024-05-05 22:16:20.171 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:20.172 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 18.6592ms
+2024-05-05 22:16:26.677 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:16:26.680 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:26.681 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:26.683 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:26.696 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:16:26.699 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:16:26.701 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 15.8456ms
+2024-05-05 22:16:26.703 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:26.705 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 28.4218ms
+2024-05-05 22:16:27.671 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - null null
+2024-05-05 22:16:27.675 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:27.676 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:27.677 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:16:27.685 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:16:27.687 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:27.689 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 10.7865ms
+2024-05-05 22:16:27.691 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:27.692 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - 404 null application/problem+json; charset=utf-8 21.4911ms
+2024-05-05 22:16:30.862 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Quiz/DeleteOneQuiz/2013 - null null
+2024-05-05 22:16:30.866 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:30.867 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Quiz/DeleteOneQuiz/2013 - 204 null null 5.5827ms
+2024-05-05 22:16:30.870 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7244/api/Quiz/DeleteOneQuiz/2013 - null null
+2024-05-05 22:16:30.874 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:30.875 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.Delete (Quizlo.API)'
+2024-05-05 22:16:30.879 +02:00 [INF] Route matched with {action = "Delete", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:30.890 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title]
+FROM [Quizzes] AS [q]
+WHERE [q].[QuizID] = @__id_0
+2024-05-05 22:16:30.903 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Quizzes]
+OUTPUT 1
+WHERE [QuizID] = @p0;
+2024-05-05 22:16:30.907 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-05 22:16:30.909 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.Delete (Quizlo.API) in 28.5693ms
+2024-05-05 22:16:30.910 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.Delete (Quizlo.API)'
+2024-05-05 22:16:30.912 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7244/api/Quiz/DeleteOneQuiz/2013 - 200 null text/plain; charset=utf-8 42.1915ms
+2024-05-05 22:16:34.307 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - null null
+2024-05-05 22:16:34.310 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:34.311 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:34.313 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:16:34.320 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:16:34.323 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:34.324 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 9.6484ms
+2024-05-05 22:16:34.326 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:16:34.328 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2013/Question/GetAllQuestionsById - 404 null application/problem+json; charset=utf-8 21.5605ms
+2024-05-05 22:16:38.936 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:16:38.939 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:38.941 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:38.942 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:16:38.950 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:16:38.953 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:16:38.954 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 9.6835ms
+2024-05-05 22:16:38.956 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:16:38.957 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 20.7743ms
+2024-05-05 22:16:42.239 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:16:42.242 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:42.243 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:16:42.244 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:16:42.250 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:16:42.253 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:16:42.254 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.3967ms
+2024-05-05 22:16:42.256 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:16:42.257 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 18.4696ms
+2024-05-05 22:16:44.262 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/379f030d-fb1a-455f-90d8-1f2636f75391 - null null
+2024-05-05 22:16:44.266 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:44.268 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/379f030d-fb1a-455f-90d8-1f2636f75391 - 204 null null 5.0991ms
+2024-05-05 22:16:44.270 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/379f030d-fb1a-455f-90d8-1f2636f75391 - null null
+2024-05-05 22:16:44.274 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:44.275 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:16:44.280 +02:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.String) on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:16:44.289 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__id_0
+2024-05-05 22:16:44.302 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-05-05 22:16:44.305 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-05 22:16:44.307 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.Delete (Quizlo.API) in 24.9934ms
+2024-05-05 22:16:44.308 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:16:44.309 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/379f030d-fb1a-455f-90d8-1f2636f75391 - 200 null text/plain; charset=utf-8 39.1063ms
+2024-05-05 22:16:56.771 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - null null
+2024-05-05 22:16:56.774 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:56.775 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - 204 null null 4.7577ms
+2024-05-05 22:16:56.779 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 51
+2024-05-05 22:16:56.784 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:56.785 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:56.786 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:16:56.793 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:16:56.796 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:56.798 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 9.5922ms
+2024-05-05 22:16:56.799 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:56.801 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 401 null application/problem+json; charset=utf-8 22.2763ms
+2024-05-05 22:16:58.018 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 51
+2024-05-05 22:16:58.023 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:58.024 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:58.025 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:16:58.030 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:16:58.033 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:58.035 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 7.9348ms
+2024-05-05 22:16:58.037 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:58.038 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 401 null application/problem+json; charset=utf-8 21.1641ms
+2024-05-05 22:16:58.201 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 51
+2024-05-05 22:16:58.203 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:16:58.204 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:58.207 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:16:58.212 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:16:58.215 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:16:58.217 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 8.1651ms
+2024-05-05 22:16:58.219 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:16:58.220 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 401 null application/problem+json; charset=utf-8 19.8491ms
+2024-05-05 22:17:05.626 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:17:05.632 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:05.634 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:17:05.636 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:17:05.640 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:17:05.645 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:17:05.646 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 8.3363ms
+2024-05-05 22:17:05.648 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:17:05.650 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 23.7333ms
+2024-05-05 22:17:22.852 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:17:22.856 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:22.857 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 4.908ms
+2024-05-05 22:17:22.859 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 89
+2024-05-05 22:17:22.863 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:22.864 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:22.865 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:17:22.922 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:17:22.927 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-05-05 22:17:22.933 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:17:22.937 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-05-05 22:17:22.940 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:17:22.944 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:17:22.951 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-05-05 22:17:22.955 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-05-05 22:17:22.955 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 87.9323ms
+2024-05-05 22:17:22.957 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:22.958 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 200 0 null 99.0089ms
+2024-05-05 22:17:25.699 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 89
+2024-05-05 22:17:25.702 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:25.703 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:25.704 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:17:25.762 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:17:25.765 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:17:25.766 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 59.2778ms
+2024-05-05 22:17:25.768 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:25.769 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 70.7899ms
+2024-05-05 22:17:26.409 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 89
+2024-05-05 22:17:26.411 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:26.413 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:26.414 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:17:26.469 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:17:26.473 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:17:26.474 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 58.2697ms
+2024-05-05 22:17:26.476 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:26.477 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 68.5747ms
+2024-05-05 22:17:26.597 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 89
+2024-05-05 22:17:26.600 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:26.602 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:26.603 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:17:26.659 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:17:26.662 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-05-05 22:17:26.664 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 58.9331ms
+2024-05-05 22:17:26.665 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:17:26.666 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 400 null application/json; charset=utf-8 69.6584ms
+2024-05-05 22:17:31.271 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:17:31.275 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:17:31.276 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:17:31.277 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:17:31.301 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:17:31.305 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:17:31.307 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 27.4611ms
+2024-05-05 22:17:31.309 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:17:31.310 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 39.43ms
+2024-05-05 22:21:04.564 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:21:04.570 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:04.571 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:04.572 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:21:04.588 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:21:04.591 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:21:04.592 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 18.5468ms
+2024-05-05 22:21:04.594 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:04.595 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 31.4212ms
+2024-05-05 22:21:05.941 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/f3f4146b-afa8-4cc4-8556-1288ed8c015f - null null
+2024-05-05 22:21:05.944 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:05.946 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/f3f4146b-afa8-4cc4-8556-1288ed8c015f - 204 null null 5.4534ms
+2024-05-05 22:21:05.949 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/f3f4146b-afa8-4cc4-8556-1288ed8c015f - null null
+2024-05-05 22:21:05.956 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:05.957 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:21:05.958 +02:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.String) on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:21:05.963 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__id_0
+2024-05-05 22:21:05.976 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-05-05 22:21:05.978 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-05 22:21:05.980 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.Delete (Quizlo.API) in 20.2204ms
+2024-05-05 22:21:05.981 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:21:05.982 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/f3f4146b-afa8-4cc4-8556-1288ed8c015f - 200 null text/plain; charset=utf-8 33.7228ms
+2024-05-05 22:21:11.810 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:21:11.813 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:11.814 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:21:11.816 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:21:11.825 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:21:11.829 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:21:11.831 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 12.8468ms
+2024-05-05 22:21:11.833 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:21:11.835 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 25.5535ms
+2024-05-05 22:21:55.342 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:21:55.351 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:55.352 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:55.354 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:21:55.364 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:21:55.367 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:21:55.368 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 12.5345ms
+2024-05-05 22:21:55.370 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:55.372 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 29.4095ms
+2024-05-05 22:21:56.081 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:21:56.086 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:21:56.087 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:56.090 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:21:56.099 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:21:56.103 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:21:56.104 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.0124ms
+2024-05-05 22:21:56.106 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:21:56.108 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 27.6901ms
+2024-05-05 22:22:06.091 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:22:06.093 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:22:06.095 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.096 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:22:06.103 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:22:06.106 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:22:06.107 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.4534ms
+2024-05-05 22:22:06.109 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.110 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 19.8589ms
+2024-05-05 22:22:06.807 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:22:06.810 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:22:06.811 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.812 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:22:06.817 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:22:06.820 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:22:06.822 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 7.4602ms
+2024-05-05 22:22:06.823 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.825 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 17.8543ms
+2024-05-05 22:22:06.956 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:22:06.958 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:22:06.959 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.961 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:22:06.965 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:22:06.968 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:22:06.970 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 6.8782ms
+2024-05-05 22:22:06.971 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:06.973 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 17.2688ms
+2024-05-05 22:22:10.425 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:22:10.428 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:22:10.429 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:10.430 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:22:10.435 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:22:10.439 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:22:10.441 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.198ms
+2024-05-05 22:22:10.442 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:22:10.443 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 18.5266ms
+2024-05-05 22:23:35.738 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:23:35.754 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:23:35.755 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:23:35.756 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:23:35.762 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:23:35.765 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:23:35.766 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.2105ms
+2024-05-05 22:23:35.768 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:23:35.769 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 31.1695ms
+2024-05-05 22:24:30.728 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:24:30.740 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:24:30.741 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:24:30.743 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:24:30.758 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:24:30.761 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:24:30.763 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 17.3702ms
+2024-05-05 22:24:30.765 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:24:30.767 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 39.6627ms
+2024-05-05 22:27:44.917 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:27:44.924 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:44.925 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:27:44.926 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:27:44.937 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:27:44.940 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:44.942 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 13.8874ms
+2024-05-05 22:27:44.946 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:27:44.947 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 30.7558ms
+2024-05-05 22:27:46.746 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:27:46.748 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:46.749 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:46.750 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:27:46.758 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:27:46.761 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:46.763 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 11.2427ms
+2024-05-05 22:27:46.765 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:46.766 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 20.5117ms
+2024-05-05 22:27:48.191 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - null null
+2024-05-05 22:27:48.195 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:48.195 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:48.196 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:27:48.206 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:27:48.209 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:48.211 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 12.1058ms
+2024-05-05 22:27:48.212 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:48.214 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 23.2651ms
+2024-05-05 22:27:49.240 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:27:49.242 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:49.242 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:49.243 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:27:49.249 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:27:49.254 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:49.256 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 10.6707ms
+2024-05-05 22:27:49.257 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:49.258 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 18.7576ms
+2024-05-05 22:27:50.438 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - null null
+2024-05-05 22:27:50.441 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:50.443 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:50.444 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:27:50.449 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:27:50.453 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:50.454 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 7.8836ms
+2024-05-05 22:27:50.456 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:50.460 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2006/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 22.7298ms
+2024-05-05 22:27:53.669 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:27:53.672 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:53.673 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:53.674 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:27:53.679 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:27:53.682 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:53.684 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 7.5066ms
+2024-05-05 22:27:53.685 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:53.686 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 17.2032ms
+2024-05-05 22:27:54.394 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - null null
+2024-05-05 22:27:54.397 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:54.398 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:54.399 +02:00 [INF] Route matched with {action = "GetAllQuestionsByQuizId", controller = "Questions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Quizlo.API.Model.Domain.Question]]] GetAllQuestionsByQuizId(Int32) on controller Quizlo.API.Controllers.QuestionsController (Quizlo.API).
+2024-05-05 22:27:54.404 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__quizId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionID], [q].[QuestionText], [q].[QuestionType], [q].[QuizID], [a].[AnswerID], [a].[AnswerText], [a].[IsCorrect], [a].[QuestionID]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[QuestionID] = [a].[QuestionID]
+WHERE [q].[QuizID] = @__quizId_0
+ORDER BY [q].[QuestionID]
+2024-05-05 22:27:54.407 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.Domain.Question, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:54.408 +02:00 [INF] Executed action Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API) in 7.3593ms
+2024-05-05 22:27:54.410 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuestionsController.GetAllQuestionsByQuizId (Quizlo.API)'
+2024-05-05 22:27:54.411 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Questions/quiz/2011/Question/GetAllQuestionsById - 200 null application/json; charset=utf-8 17.835ms
+2024-05-05 22:27:56.389 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:27:56.392 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:27:56.393 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:56.394 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:27:56.399 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:27:56.402 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:27:56.403 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 7.097ms
+2024-05-05 22:27:56.405 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:27:56.406 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 17.4339ms
+2024-05-05 22:29:08.504 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:29:08.511 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:29:08.512 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:08.514 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:29:08.523 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:29:08.526 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:29:08.527 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 11.1566ms
+2024-05-05 22:29:08.529 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:08.530 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 26.6195ms
+2024-05-05 22:29:11.871 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:29:11.874 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:29:11.876 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:11.878 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:29:11.885 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:29:11.889 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:29:11.890 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.7412ms
+2024-05-05 22:29:11.891 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:11.893 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 22.5414ms
+2024-05-05 22:29:12.413 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:29:12.416 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:29:12.417 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.418 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:29:12.423 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:29:12.431 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:29:12.432 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 12.4589ms
+2024-05-05 22:29:12.434 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.435 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 22.2949ms
+2024-05-05 22:29:12.586 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:29:12.589 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:29:12.590 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.592 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:29:12.597 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:29:12.600 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:29:12.602 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.1167ms
+2024-05-05 22:29:12.604 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.605 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 19.3225ms
+2024-05-05 22:29:12.755 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:29:12.758 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:29:12.759 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.760 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:29:12.765 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:29:12.769 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:29:12.771 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.7534ms
+2024-05-05 22:29:12.773 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:29:12.775 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 20.8689ms
+2024-05-05 22:30:09.105 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:09.115 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:09.119 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:09.120 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:09.132 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:09.134 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:09.136 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 13.1655ms
+2024-05-05 22:30:09.137 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:09.139 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 34.3926ms
+2024-05-05 22:30:13.298 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:13.301 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:13.302 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.304 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:13.310 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:13.314 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:13.316 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.0738ms
+2024-05-05 22:30:13.317 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.319 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 21.4052ms
+2024-05-05 22:30:13.741 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:13.744 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:13.746 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.747 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:13.751 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:13.756 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:13.758 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 9.3068ms
+2024-05-05 22:30:13.760 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.761 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 20.1791ms
+2024-05-05 22:30:13.918 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:13.921 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:13.922 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.924 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:13.930 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:13.933 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:13.934 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.2314ms
+2024-05-05 22:30:13.936 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:13.937 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 19.5365ms
+2024-05-05 22:30:14.088 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:14.090 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:14.091 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:14.092 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:14.097 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:14.100 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:14.102 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 7.5184ms
+2024-05-05 22:30:14.103 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:14.105 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 17.5086ms
+2024-05-05 22:30:14.286 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:30:14.289 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:30:14.290 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:14.292 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:30:14.296 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:30:14.300 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:30:14.302 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 8.2602ms
+2024-05-05 22:30:14.304 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:30:14.306 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 20.6476ms
+2024-05-05 22:32:52.770 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:32:52.775 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:32:52.776 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:32:52.777 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:32:52.786 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:32:52.789 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:32:52.791 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 11.6554ms
+2024-05-05 22:32:52.793 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:32:52.798 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 27.5107ms
+2024-05-05 22:33:37.368 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:33:37.380 +02:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-05-05 22:33:37.382 +02:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-05-05 22:33:37.383 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Authentification/register - 405 0 null 15.5401ms
+2024-05-05 22:34:10.494 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:34:10.497 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:10.499 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 5.1329ms
+2024-05-05 22:34:10.501 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 89
+2024-05-05 22:34:10.506 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:10.507 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:34:10.508 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:34:10.571 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:10.577 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-05-05 22:34:10.581 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:34:10.586 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-05-05 22:34:10.589 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:34:10.592 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:10.599 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-05-05 22:34:10.602 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-05-05 22:34:10.603 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 93.7546ms
+2024-05-05 22:34:10.605 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:34:10.606 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 200 0 null 104.7266ms
+2024-05-05 22:34:16.571 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:34:16.575 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:16.578 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:34:16.580 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:34:16.585 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:34:16.588 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:34:16.589 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 7.6074ms
+2024-05-05 22:34:16.591 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:34:16.592 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 21.5634ms
+2024-05-05 22:34:44.840 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:34:44.846 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:44.847 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 7.3714ms
+2024-05-05 22:34:44.850 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 85
+2024-05-05 22:34:44.852 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:44.853 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:34:44.854 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:34:44.912 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:44.921 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-05-05 22:34:44.925 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:34:44.928 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-05-05 22:34:44.931 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:34:44.934 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:44.939 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-05-05 22:34:44.942 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-05-05 22:34:44.943 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 87.3505ms
+2024-05-05 22:34:44.944 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:34:44.945 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 200 0 null 95.9644ms
+2024-05-05 22:34:48.314 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:34:48.317 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:48.318 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:34:48.320 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:34:48.325 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:34:48.329 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:34:48.330 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 7.3722ms
+2024-05-05 22:34:48.331 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:34:48.334 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 19.9449ms
+2024-05-05 22:34:49.122 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/a853e562-b647-4226-aa5f-1998e5eadc61 - null null
+2024-05-05 22:34:49.126 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:49.127 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/a853e562-b647-4226-aa5f-1998e5eadc61 - 204 null null 5.2604ms
+2024-05-05 22:34:49.129 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/a853e562-b647-4226-aa5f-1998e5eadc61 - null null
+2024-05-05 22:34:49.134 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:49.134 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:34:49.136 +02:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.String) on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:34:49.140 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__id_0
+2024-05-05 22:34:49.151 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-05-05 22:34:49.153 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-05 22:34:49.155 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.Delete (Quizlo.API) in 17.9656ms
+2024-05-05 22:34:49.157 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:34:49.158 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/a853e562-b647-4226-aa5f-1998e5eadc61 - 200 null text/plain; charset=utf-8 28.6264ms
+2024-05-05 22:34:52.948 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:34:52.951 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:52.952 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:34:52.953 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:34:52.959 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:34:52.962 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:34:52.963 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 8.3209ms
+2024-05-05 22:34:52.965 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:34:52.966 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 18.1749ms
+2024-05-05 22:34:59.567 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - null null
+2024-05-05 22:34:59.570 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:59.571 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - 204 null null 4.1658ms
+2024-05-05 22:34:59.573 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 50
+2024-05-05 22:34:59.577 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:59.578 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:34:59.579 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:34:59.585 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:34:59.645 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-05-05 22:34:59.649 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-05-05 22:34:59.653 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 22:34:59.656 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:59.663 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-05-05 22:34:59.667 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[LoginProvider] = @__p_1 AND [a].[Name] = @__p_2
+2024-05-05 22:34:59.670 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:34:59.677 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p20='?' (Size = 450), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p21='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p4, [ConcurrencyStamp] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [FirstName] = @p8, [LastName] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-05-05 22:34:59.680 +02:00 [INF] Executing OkObjectResult, writing value of type 'Quizlo.API.Model.DTOs.TokenDto'.
+2024-05-05 22:34:59.681 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 99.8201ms
+2024-05-05 22:34:59.682 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:34:59.683 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 200 null application/json; charset=utf-8 110.9381ms
+2024-05-05 22:34:59.706 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:34:59.709 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:34:59.710 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:34:59.711 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:34:59.716 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:34:59.719 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:34:59.721 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 7.1465ms
+2024-05-05 22:34:59.722 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:34:59.723 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 17.2727ms
+2024-05-05 22:35:09.943 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - null null
+2024-05-05 22:35:09.946 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:35:09.947 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/login - 204 null null 3.7325ms
+2024-05-05 22:35:09.948 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/login - application/json 48
+2024-05-05 22:35:09.954 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:35:09.954 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:35:09.955 +02:00 [INF] Route matched with {action = "Login", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Quizlo.API.Model.DTOs.LoginDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:35:09.965 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-05-05 22:35:09.968 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-05-05 22:35:09.969 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API) in 11.9383ms
+2024-05-05 22:35:09.971 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Login (Quizlo.API)'
+2024-05-05 22:35:09.972 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/login - 401 null application/problem+json; charset=utf-8 23.5912ms
+2024-05-05 22:36:10.812 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - null null
+2024-05-05 22:36:10.818 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:10.819 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/Authentification/register - 204 null null 6.8476ms
+2024-05-05 22:36:10.823 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7244/api/Authentification/register - application/json 85
+2024-05-05 22:36:10.828 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:10.829 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:36:10.830 +02:00 [INF] Route matched with {action = "Register", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(Quizlo.API.Model.DTOs.UserDto) on controller Quizlo.API.Controllers.AuthentificationController (Quizlo.API).
+2024-05-05 22:36:10.888 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:36:10.894 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-05-05 22:36:10.898 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:36:10.902 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-05-05 22:36:10.905 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-05-05 22:36:10.909 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-05-05 22:36:10.918 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-05-05 22:36:10.921 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-05-05 22:36:10.922 +02:00 [INF] Executed action Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API) in 90.0327ms
+2024-05-05 22:36:10.923 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.AuthentificationController.Register (Quizlo.API)'
+2024-05-05 22:36:10.925 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7244/api/Authentification/register - 200 0 null 102.0148ms
+2024-05-05 22:36:12.285 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - null null
+2024-05-05 22:36:12.288 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:12.290 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:36:12.291 +02:00 [INF] Route matched with {action = "GetAll", controller = "Quiz"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.QuizController (Quizlo.API).
+2024-05-05 22:36:12.301 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuizID], [q].[CreatorID], [q].[DateCreated], [q].[Description], [q].[Title], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [Quizzes] AS [q]
+INNER JOIN [AspNetUsers] AS [a] ON [q].[CreatorID] = [a].[Id]
+2024-05-05 22:36:12.308 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetQuizDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:36:12.310 +02:00 [INF] Executed action Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API) in 16.3507ms
+2024-05-05 22:36:12.312 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.QuizController.GetAll (Quizlo.API)'
+2024-05-05 22:36:12.314 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/Quiz/ReadAllQuizzes - 200 null application/json; charset=utf-8 29.2065ms
+2024-05-05 22:36:22.723 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - null null
+2024-05-05 22:36:22.727 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:22.728 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:36:22.730 +02:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:36:22.741 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2024-05-05 22:36:22.744 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Quizlo.API.Model.DTOs.GetUserDTO, Quizlo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-05 22:36:22.745 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.GetAll (Quizlo.API) in 11.9493ms
+2024-05-05 22:36:22.747 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.GetAll (Quizlo.API)'
+2024-05-05 22:36:22.749 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7244/api/User/ReadAllUsers - 200 null application/json; charset=utf-8 26.5737ms
+2024-05-05 22:36:24.202 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/656b1691-b53c-4c1e-b2d4-d1f407816236 - null null
+2024-05-05 22:36:24.206 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:24.207 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7244/api/User/DeleteOneUser/656b1691-b53c-4c1e-b2d4-d1f407816236 - 204 null null 5.9594ms
+2024-05-05 22:36:24.210 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/656b1691-b53c-4c1e-b2d4-d1f407816236 - null null
+2024-05-05 22:36:24.216 +02:00 [INF] CORS policy execution successful.
+2024-05-05 22:36:24.217 +02:00 [INF] Executing endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:36:24.218 +02:00 [INF] Route matched with {action = "Delete", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.String) on controller Quizlo.API.Controllers.UserController (Quizlo.API).
+2024-05-05 22:36:24.222 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__id_0
+2024-05-05 22:36:24.232 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-05-05 22:36:24.235 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-05 22:36:24.236 +02:00 [INF] Executed action Quizlo.API.Controllers.UserController.Delete (Quizlo.API) in 16.5565ms
+2024-05-05 22:36:24.237 +02:00 [INF] Executed endpoint 'Quizlo.API.Controllers.UserController.Delete (Quizlo.API)'
+2024-05-05 22:36:24.239 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7244/api/User/DeleteOneUser/656b1691-b53c-4c1e-b2d4-d1f407816236 - 200 null text/plain; charset=utf-8 29.0045ms

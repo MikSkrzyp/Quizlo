@@ -9,7 +9,7 @@
       <div class="quiz-card" v-for="quiz in quizzes" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
         <div class="bottom-text-container">
-          <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)">Update</a></p>
+          <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)" :style="{ color: '#46a8f3', cursor: 'pointer' }">Update</a></p>
           <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
         </div>
       </div>
@@ -47,11 +47,13 @@ export default {
         await axios.delete(`https://localhost:7244/api/Quiz/DeleteOneQuiz/${quizId}`);
         quizzes.value = quizzes.value.filter(quiz => quiz.id !== quizId);
         alert('Quiz successfully deleted!');
+        window.location.reload();  // Refresh the page to reflect changes
       } catch (error) {
         console.error('Failed to delete the quiz:', error);
         alert('Failed to delete the quiz. Please try again.');
       }
     };
+
     const updateQuiz = (quizId) => {
       // Navigate to the updateQuiz route with the quiz ID parameter
       router.push({ name: 'updateQuiz', params: { id: quizId } });
@@ -77,7 +79,7 @@ export default {
 .quiz-card {
   flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: rgba(176, 176, 176, 0.92);
   border: 1px solid #ddd;
   border-radius: 14px;
   padding: 20px;

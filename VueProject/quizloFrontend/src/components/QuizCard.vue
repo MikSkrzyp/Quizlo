@@ -15,7 +15,7 @@ const navigateToQuiz = () => {
 <div @click="navigateToQuiz">
   <h1>{{quiz.title}}</h1>
   <h2>{{quiz.description}}</h2>
-  <h7>quiz id:{{quiz.quizID}}</h7>
+<!--  <h7>quiz id:{{quiz.quizID}}</h7>-->
 </div>
   <br/>
 </template>

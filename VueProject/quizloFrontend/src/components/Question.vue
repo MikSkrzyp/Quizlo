@@ -20,7 +20,7 @@ const emitSelectedOption = (isCorrect) => {
         :key="answer.answerID"
         @click="emitSelectedOption(answer.isCorrect)"
     >
-      <h1> {{answer.answerText}} </h1>
+      <h1 :style="{ cursor: 'pointer' }"> {{answer.answerText}} </h1>
     </div>
   </div>
 </template>
