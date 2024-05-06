@@ -79,7 +79,7 @@ export default {
 .quiz-card {
   flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 20px;
-  background-color: rgba(176, 176, 176, 0.92);
+  background-color: rgba(195, 195, 195, 0.92);
   border: 1px solid #ddd;
   border-radius: 14px;
   padding: 20px;

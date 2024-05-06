@@ -1,12 +1,26 @@
 <template>
   <div>
     <h1>User List</h1>
-    <ul>
-      <li v-for="user in users" :key="user.id">
-        {{ user.firstName }} {{ user.lastName }}
-        <button @click="deleteUser(user.id)">Delete</button>
-      </li>
-    </ul>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">number</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody class="table-group-divider">
+      <tr v-for="(user, index) in users" :key="user.id">
+        <th scope="row">{{ index + 1 }}</th>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>
+          <button @click="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -46,11 +60,3 @@ export default {
 };
 </script>
 
-<style scoped>
-li {
-  margin-bottom: 10px;
-}
-button {
-  margin-left: 10px;
-}
-</style>
