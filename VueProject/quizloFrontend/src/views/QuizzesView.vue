@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h1 class="fancy-font">Quizzes</h1>
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="fancy-font mx-auto">Quizzes</h1>
+      <router-link to="/PostQuiz" class="btn btn-light custom-btn" style="background-color: #60A1BC; color: white; border: none; margin-right: 20px;">Create Quiz</router-link>
+    </div>
+    <br>
     <div class="options-container">
       <div class="quiz-card" v-for="quiz in quizzes" :key="quiz.id">
         <QuizCard :quiz="quiz"/>
         <div class="bottom-text-container">
-          <p class="bottom-text"><a href="updateQuiz">Update</a></p>
-          <p class="bottom-text"><a @click="deleteQuiz(quiz.id)" style="color: #7A2021; cursor: pointer;">Delete</a></p>
+          <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)">Update</a></p>
+          <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
         </div>
       </div>
     </div>
@@ -17,21 +21,21 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import QuizCard from "@/components/QuizCard.vue";
+import { useRouter } from 'vue-router';
+
 
 export default {
   components: { QuizCard },
+
   setup() {
     const quizzes = ref([]);
-
+    const router = useRouter();
     const fetchQuizzes = async () => {
       try {
         const response = await axios.get('https://localhost:7244/api/Quiz/ReadAllQuizzes');
         quizzes.value = response.data;
       } catch (error) {
         console.error('Failed to fetch quizzes:', error);
-        console.error('Request URL:', error.config.url);
-        console.error('Status Code:', error.response.status);
-        console.error('Response Data:', error.response.data);
         alert('Failed to fetch quizzes. Please try again.');
       }
     };
@@ -45,18 +49,19 @@ export default {
         alert('Quiz successfully deleted!');
       } catch (error) {
         console.error('Failed to delete the quiz:', error);
-        console.error('Request URL:', error.config.url);
-        console.error('Status Code:', error.response.status);
-        console.error('Response Data:', error.response.data);
         alert('Failed to delete the quiz. Please try again.');
       }
     };
-
+    const updateQuiz = (quizId) => {
+      // Navigate to the updateQuiz route with the quiz ID parameter
+      router.push({ name: 'updateQuiz', params: { id: quizId } });
+    };
     onMounted(fetchQuizzes);
 
     return {
       quizzes,
-      deleteQuiz
+      deleteQuiz,
+      updateQuiz
     };
   },
 };
