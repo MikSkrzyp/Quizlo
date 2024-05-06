@@ -6,11 +6,15 @@
     </div>
     <br>
     <div class="options-container">
-      <div class="quiz-card" v-for="quiz in quizzes" :key="quiz.id">
-        <QuizCard :quiz="quiz"/>
-        <div class="bottom-text-container">
-          <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)" :style="{ color: '#46a8f3', cursor: 'pointer' }">Update</a></p>
-          <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
+      <div class="row">
+        <div class="col-4" v-for="quiz in quizzes" :key="quiz.id">
+          <div class="quiz-card">
+            <QuizCard :quiz="quiz"/>
+            <div class="bottom-text-container">
+              <p class="bottom-text"><a @click="updateQuiz(quiz.quizID)" :style="{ color: '#46a8f3', cursor: 'pointer' }">Update</a></p>
+              <p class="bottom-text"><a @click="deleteQuiz(quiz.quizID)" :style="{ color: '#7A2021', cursor: 'pointer' }">Delete</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -23,13 +27,13 @@ import axios from 'axios';
 import QuizCard from "@/components/QuizCard.vue";
 import { useRouter } from 'vue-router';
 
-
 export default {
   components: { QuizCard },
 
   setup() {
     const quizzes = ref([]);
     const router = useRouter();
+
     const fetchQuizzes = async () => {
       try {
         const response = await axios.get('https://localhost:7244/api/Quiz/ReadAllQuizzes');
@@ -58,6 +62,7 @@ export default {
       // Navigate to the updateQuiz route with the quiz ID parameter
       router.push({ name: 'updateQuiz', params: { id: quizId } });
     };
+
     onMounted(fetchQuizzes);
 
     return {
@@ -71,13 +76,10 @@ export default {
 
 <style scoped>
 .options-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0 15px;
 }
 
 .quiz-card {
-  flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 20px;
   background-color: rgba(195, 195, 195, 0.92);
   border: 1px solid #ddd;
