@@ -10,6 +10,7 @@ import DeleteQuiz from "@/views/DeleteQuiz.vue";
 import PutQuiz from "@/views/PutQuiz.vue";
 import UsersList from "@/views/UsersList.vue";
 import {useAuthStore} from "@/stores/users.js";
+import UserProfile from "@/views/UserProfile.vue";
 
 
 
@@ -69,6 +70,12 @@ const router = createRouter({
             name:'users',
             component:UsersList,
             meta: { requiresAdmin: true }
+        },
+        {
+            path: '/profile',
+            name:'UserProfile',
+            component:UserProfile,
+            meta: { requiresAdmin: false }
         }
 
     ]
