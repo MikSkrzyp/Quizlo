@@ -5,11 +5,18 @@ import {jwtDecode} from 'jwt-decode'
 
 export const useAuthStore = defineStore({
   id: 'auth',
-  state: () => ({
-    token: Cookies.get('token') || null,
-    error: null,
-    user: null, // Add this line
-  }),
+  state: () => {
+    const token = Cookies.get('token') || null;
+    let user = null;
+    if (token) {
+      user = jwtDecode(token);
+    }
+    return {
+      token: token,
+      error: null,
+      user: user,
+    }
+  },
   getters: {
     isAuthenticated(state) {
       return !!state.token
