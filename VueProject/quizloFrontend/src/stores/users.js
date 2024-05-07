@@ -8,7 +8,8 @@ export const useAuthStore = defineStore({
   state: () => ({
     token: Cookies.get('token') || null,
     error: null,
-    user: null, // Add this line
+    user: null,
+    photoURL: null, // Add this line
   }),
   getters: {
     isAuthenticated(state) {
@@ -30,6 +31,9 @@ export const useAuthStore = defineStore({
       } else {
         this.user = null
       }
+    },
+    setPhotoURL(url) {
+      this.photoURL = url;
     },
     clearToken() {
       this.token = null

@@ -6,7 +6,7 @@
           <div class="card-body">
             <h1 class="card-title text-center mb-4">User Profile</h1>
             <div class="text-center mb-4">
-              <img :src="user && user.photoURL ? user.photoURL : 'path/to/default/photo.jpg'" alt="User Photo" class="img-fluid rounded-circle" style="width: 200px;">
+              <img :src="photoURL || 'path/to/default/photo.jpg'" alt="User Photo" class="img-fluid rounded-circle" style="width: 200px;">
             </div>
             <div class="mb-3">
               <input type="file" @change="handlePhotoUpload" class="form-control">
@@ -23,18 +23,17 @@
 import { useAuthStore } from "@/stores/users.js";
 
 export default {
-  data() {
-    return {
-      user: {
-        photoURL: null,
-      }
-    };
+  computed: {
+    photoURL() {
+      return useAuthStore().photoURL;
+    }
   },
   methods: {
     async handlePhotoUpload(event) {
       const file = event.target.files[0];
       try {
-        this.user.photoURL = URL.createObjectURL(file);
+        const url = URL.createObjectURL(file);
+        useAuthStore().setPhotoURL(url);
       } catch (error) {
         console.error('Error uploading photo:', error);
       }

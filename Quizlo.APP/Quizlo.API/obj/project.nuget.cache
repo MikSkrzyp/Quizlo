@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/h0LvzGu8eCZv5Jw1nbPzp+tHWctemPkdh/hs2GJQ1qbxtuVb8f5dxXUe5Ka2LO62xEkKtnK3+/ocAVocTKTtg==",
+  "dgSpecHash": "6tmh0KcX1bufXlpXm/YZakvRWZ5y1DTp0X82AbLtIwk3JRcnmNlzrc8alyLT6Vbl044C9Cn35lDW+d2BK6wd8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\goska\\Desktop\\Quizloooooo\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
+  "projectFilePath": "C:\\Users\\goska\\Desktop\\vuemerge\\Quizlo\\Quizlo.APP\\Quizlo.API\\Quizlo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\goska\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\goska\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
