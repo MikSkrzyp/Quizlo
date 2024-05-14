@@ -37,7 +37,7 @@ const register = async () => {
             <input v-model="password" type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <button type="submit" class="btn btn-light mx-2 custom-btn" style="background-color: #60A1BC; color: white; border: none;">Submit</button>
-          <p v-if="auth.error" class="text-danger">{{ auth.error }}</p>
+          <p v-if="auth.error" class="text-danger">Excuse me, ur password or email are not correct</p>
         </form>
       </div>
       <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">

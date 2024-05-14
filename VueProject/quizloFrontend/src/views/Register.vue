@@ -56,7 +56,7 @@ const registerUser = async () => {
       alert('Registration successful! Redirecting to login...');
       window.location.href = '/'; // Adjust as needed for your routing
     } else {
-      throw new Error('Failed to register');
+      throw new Error('Failed to register, probably email that you entered is already in our database');
     }
   } catch (error) {
     errorMessage.value = error.message || 'An error occurred during registration.';
