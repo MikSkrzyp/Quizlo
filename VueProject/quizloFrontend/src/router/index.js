@@ -6,7 +6,6 @@ import AboutUs from '../views/AboutUs.vue'
 import QuizView from "@/views/QuizView.vue";
 import PostQuiz from "@/views/PostQuiz.vue";
 import HomePage from "@/views/HomePage.vue";
-import DeleteQuiz from "@/views/DeleteQuiz.vue";
 import PutQuiz from "@/views/PutQuiz.vue";
 import UsersList from "@/views/UsersList.vue";
 import { useAuthStore } from "@/stores/users.js";

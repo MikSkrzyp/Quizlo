@@ -1,5 +1,5 @@
 <script setup>
-// No JavaScript code is needed for this component
+
 </script>
 
 <template>
@@ -19,8 +19,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it appears above other content */
-  overflow-y: auto; /* Enables vertical scrolling */
-  max-height: 200px; /* Adjust the maximum height as needed */
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 200px;
 }
 </style>

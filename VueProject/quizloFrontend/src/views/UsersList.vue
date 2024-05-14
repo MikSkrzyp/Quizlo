@@ -1,3 +1,33 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const users = ref([]);
+
+const fetchUsers = async () => {
+  try {
+    const response = await axios.get('https://localhost:7244/api/User/ReadAllUsers');
+    users.value = response.data;
+  } catch (error) {
+    console.error('Failed to fetch users:', error);
+    alert('Failed to load users.');
+  }
+};
+
+const deleteUser = async (userId) => {
+  try {
+    await axios.delete(`https://localhost:7244/api/User/DeleteOneUser/${userId}`);
+    users.value = users.value.filter(user => user.id !== userId);
+    alert('User deleted successfully');
+  } catch (error) {
+    console.error('Failed to delete user:', error);
+    alert('Failed to delete user.');
+  }
+};
+
+onMounted(fetchUsers);
+</script>
+
 <template>
   <div>
     <h1>User List</h1>
@@ -24,39 +54,7 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios';
 
-export default {
-  data() {
-    return {
-      users: []
-    };
-  },
-  mounted() {
-    this.fetchUsers();
-  },
-  methods: {
-    async fetchUsers() {
-      try {
-        const response = await axios.get('https://localhost:7244/api/User/ReadAllUsers');
-        this.users = response.data;
-      } catch (error) {
-        console.error('Failed to fetch users:', error);
-        alert('Failed to load users.');
-      }
-    },
-    async deleteUser(userId) {
-      try {
-        await axios.delete(`https://localhost:7244/api/User/DeleteOneUser/${userId}`);
-        this.users = this.users.filter(user => user.id !== userId);
-        alert('User deleted successfully');
-      } catch (error) {
-        console.error('Failed to delete user:', error);
-        alert('Failed to delete user.');
-      }
-    }
-  }
-};
-</script>
 
+<style scoped>
+</style>

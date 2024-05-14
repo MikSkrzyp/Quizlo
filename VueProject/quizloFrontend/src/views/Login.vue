@@ -52,5 +52,5 @@ const register = async () => {
 </template>
 
 <style scoped>
-/* Add your custom styles here */
+
 </style>

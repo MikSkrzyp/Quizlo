@@ -1,4 +1,4 @@
-# Foreign for IT
+# Quizlo
 
 
 ### What is this about?
@@ -14,16 +14,16 @@ Admin:
 
 * can get, create, update and delete quiz
 
-* can get and delete? users
+* can get and delete users
 
 Student:
 
 * can search for quiz and answer to its questions
 
-* can take on quiz 
+* can solve quiz 
 
 ## Tech stack:
 * asp.net web api
-* mssql
 * vue
+* mssql
 * figma

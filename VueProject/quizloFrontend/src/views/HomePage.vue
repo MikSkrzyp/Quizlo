@@ -1,3 +1,8 @@
+<script>
+export default {
+
+};
+</script>
 <template>
   <div class="big-word">
     <h1 class="fancy-font">Quizzes</h1>
@@ -13,11 +18,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  // Your script setup goes here
-};
-</script>
+
 
 <style scoped>
 
