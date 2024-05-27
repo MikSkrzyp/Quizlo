@@ -1,12 +1,12 @@
 <script setup>
-import {defineProps, defineEmits} from "vue"
+import { defineProps, defineEmits } from "vue";
 
-const emit = defineEmits(["selectOption"])
-const { question } = defineProps(['question']);
+const emit = defineEmits(["selectOption"]);
+const { question, selectedAnswerIndex, correctAnswerIndex } = defineProps(["question", "selectedAnswerIndex", "correctAnswerIndex"]);
 
-const emitSelectedOption = (isCorrect) => {
-  emit("selectOption", isCorrect)
-}
+const emitSelectedOption = (isCorrect, index) => {
+  emit("selectOption", isCorrect, index);
+};
 </script>
 
 <template>
@@ -15,24 +15,24 @@ const emitSelectedOption = (isCorrect) => {
       <div class="card-body">
         <div class="question-container">
           <h1 class="question">
-            {{question.questionText}}
+            {{ question.questionText }}
           </h1>
-          <h4>{{question.questionType}}</h4>
+          <h4>{{ question.questionType }}</h4>
           <div class="list-group">
             <a href="#"
                class="list-group-item list-group-item-action"
+               :class="{ 'correct-answer': index === correctAnswerIndex, 'selected-answer': index === selectedAnswerIndex }"
                v-for="(answer, index) in question.answers"
                :key="answer.answerID"
-               @click="emitSelectedOption(answer.isCorrect)"
+               @click="emitSelectedOption(answer.isCorrect, index)"
             >
-              {{ String.fromCharCode(65 + index) }}. {{answer.answerText}}
+              {{ String.fromCharCode(65 + index) }}. {{ answer.answerText }}
             </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -44,7 +44,7 @@ const emitSelectedOption = (isCorrect) => {
 .container {
   position: fixed;
   top: 50%;
-  left: 50% ;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -55,9 +55,19 @@ const emitSelectedOption = (isCorrect) => {
 
 /* Change text color */
 .container .card-header,
-.container.question-container h1,
+.container .question-container h1,
 .container .question-container h4,
 .container .list-group-item {
   color: #000; /* Default color */
+}
+
+.correct-answer {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.selected-answer {
+  background-color: #f8d7da;
+  color: #721c24;
 }
 </style>
