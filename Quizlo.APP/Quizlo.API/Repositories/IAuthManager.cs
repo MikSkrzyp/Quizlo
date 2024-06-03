@@ -8,8 +8,5 @@ namespace Quizlo.API.Repositories
         Task<IEnumerable<IdentityError>> Register(UserDto userDto);
         Task<TokenDto> Login(LoginDto loginDto);
 
-        Task<string> CreateRefreshToken();
-
-        Task<TokenDto> VerifyRefreshToken(TokenDto tokenDto);
     }
 }

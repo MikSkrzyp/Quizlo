@@ -1,13 +1,17 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
-
+//import axios from 'axios';
+import axios from '../stores/axios.js';
+import {API_URL} from "@/stores/config.js";
 const users = ref([]);
+
 
 const fetchUsers = async () => {
   try {
-    const response = await axios.get('https://localhost:7244/api/User/ReadAllUsers');
+    const response = await axios.get(`${API_URL}/api/User/ReadAllUsers`);
     users.value = response.data;
+    //filter not to show admin
+    users.value = users.value.filter(user => user.id !== 'admin-user-id');
   } catch (error) {
     console.error('Failed to fetch users:', error);
     alert('Failed to load users.');
@@ -16,7 +20,7 @@ const fetchUsers = async () => {
 
 const deleteUser = async (userId) => {
   try {
-    await axios.delete(`https://localhost:7244/api/User/DeleteOneUser/${userId}`);
+    await axios.delete(`${API_URL}/api/User/DeleteOneUser/${userId}`);
     users.value = users.value.filter(user => user.id !== userId);
     alert('User deleted successfully');
   } catch (error) {

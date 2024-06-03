@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Model.Domain;
 using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
@@ -19,6 +20,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PostQuestion([FromBody] QuestionDTO questionDTO)
         {
             if (!ModelState.IsValid)
@@ -80,6 +82,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
             var questionToDelete = await _questionRepository.GetQuestionByIdAsync(id);
@@ -96,6 +99,7 @@ namespace Quizlo.API.Controllers
         
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PutQuestion(int id, [FromBody] QuestionDTO questionDTO)
         {
            

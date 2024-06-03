@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("76e66f18-e46d-41a2-9ac2-6ba57378c2cf")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quizlo.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d176e4109e785984e2323659130c2b5526904cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Quizlo.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quizlo.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

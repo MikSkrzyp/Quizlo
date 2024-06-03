@@ -5,6 +5,7 @@ import axios from "axios";
 import { useRoute } from "vue-router";
 import Question from "@/components/Question.vue";
 import Result from "@/components/Result.vue";
+import {API_URL} from "@/stores/config.js";
 
 const route = useRoute();
 const quizId = parseInt(route.params.id);
@@ -20,7 +21,7 @@ const barPercentage = computed(() => `${(currentQuestionIndex.value / questions.
 
 async function fetchQuizQuestions() {
   try {
-    const response = await axios.get(`https://localhost:7244/api/Questions/quiz/${quizId}/Question/GetAllQuestionsById`);
+    const response = await axios.get(`${API_URL}/api/Questions/quiz/${quizId}/Question/GetAllQuestionsById`);
     questions.value = response.data;
   } catch (error) {
     console.error(error);

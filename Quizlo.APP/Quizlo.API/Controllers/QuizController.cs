@@ -27,6 +27,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("CreateOneQuiz")]
         public async Task<IActionResult> Create([FromBody] CreateQuizDto createQuizDto)
         {
@@ -63,6 +64,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         [Route("UpdateOneQuiz/{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, UpdateQuizDTO updateQuizDTO)
         {
@@ -77,6 +79,7 @@ namespace Quizlo.API.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("DeleteOneQuiz/{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

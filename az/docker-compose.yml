@@ -1,0 +1,34 @@
+version: '3.8'
+
+networks:
+  quizlo-network:
+
+services:
+  quizlo-api:
+    image: quizloreg.azurecr.io/quizlo-back:latest
+    ports:
+      - "8080:80"   # Host port mapping
+    depends_on:
+      - db
+    networks:
+      - quizlo-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=QuizloDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=YourStrong!Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    networks:
+      - quizlo-network
+
+  vue-app:
+    image: quizloreg.azurecr.io/quizlo-front:latest
+    ports:
+      - "8081:81"
+    networks:
+      - quizlo-network

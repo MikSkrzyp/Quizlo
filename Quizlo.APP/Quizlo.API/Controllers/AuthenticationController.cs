@@ -56,22 +56,5 @@ namespace Quizlo.API.Controllers
             return Ok(authResponse);
         }
 
-        // POST: api/Account/refreshtoken
-        [HttpPost]
-        [Route("refreshtoken")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> RefreshToken([FromBody] TokenDto tokenDTO)
-        {
-            var authResponse = await _authManager.VerifyRefreshToken(tokenDTO);
-
-            if (authResponse == null)
-            {
-                return Unauthorized();
-            }
-
-            return Ok(authResponse);
-        }
     }
 }

@@ -14,7 +14,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(new LoggerConfiguration()
     .WriteTo.Console()
@@ -60,16 +59,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173")
+            builder.WithOrigins("http://localhost:8081")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
 });
 
-
 builder.Services.AddDbContext<QuizloDbContext>((options) =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("QuizloDb"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
@@ -80,14 +78,10 @@ builder.Services.AddIdentityCore<User>()
     .AddEntityFrameworkStores<QuizloDbContext>()
     .AddDefaultTokenProviders();
 
-
-
 builder.Services.AddScoped<IAuthManager, AuthManager>();
-builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
-builder.Services.AddScoped<IQuizRepository,SQLQuizRepository>();
+builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
+builder.Services.AddScoped<IQuizRepository, SQLQuizRepository>();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
-
-
 
 builder.Services.AddAuthentication(o =>
 {
@@ -107,7 +101,9 @@ builder.Services.AddAuthentication(o =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]))
     };
 });
+
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -115,18 +111,23 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-/*app.UseAuthentication();
-app.UseAuthorization();*/
+// Ensure database is created and migrations are applied
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<QuizloDbContext>();
+    context.Database.Migrate(); // Apply migrations, use EnsureCreated() for a simple database creation
+}
 
 app.UseMiddleware<GlobalExceptionHandling>();
 
 app.UseCors("AllowSpecificOrigin");
 
-
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run("http://0.0.0.0:80");

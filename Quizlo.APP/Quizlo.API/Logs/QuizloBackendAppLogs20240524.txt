@@ -1,0 +1,80 @@
+2024-05-24 15:24:57.184 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-05-24 15:24:57.221 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-05-24 15:24:57.231 +00:00 [INF] Creating key {1d90eb88-fcad-4be1-bd1d-dcf2e04a56db} with creation date 2024-05-24 15:24:57Z, activation date 2024-05-24 15:24:57Z, and expiration date 2024-08-22 15:24:57Z.
+2024-05-24 15:24:57.247 +00:00 [WRN] No XML encryptor configured. Key {1d90eb88-fcad-4be1-bd1d-dcf2e04a56db} may be persisted to storage in unencrypted form.
+2024-05-24 15:24:57.506 +00:00 [INF] Now listening on: http://[::]:8080
+2024-05-24 15:24:57.506 +00:00 [INF] Now listening on: https://[::]:8081
+2024-05-24 15:24:57.508 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 15:24:57.509 +00:00 [INF] Hosting environment: Development
+2024-05-24 15:24:57.509 +00:00 [INF] Content root path: /app
+2024-05-24 15:25:00.003 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/index.html - null null
+2024-05-24 15:25:00.938 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/index.html - 200 null text/html;charset=utf-8 935.6528ms
+2024-05-24 15:25:01.103 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - null null
+2024-05-24 15:25:01.229 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.7891ms
+2024-05-24 15:25:33.988 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-05-24 15:25:34.028 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-05-24 15:25:34.039 +00:00 [INF] Creating key {a231546b-ccff-43e5-82c3-8608528aebe1} with creation date 2024-05-24 15:25:34Z, activation date 2024-05-24 15:25:34Z, and expiration date 2024-08-22 15:25:34Z.
+2024-05-24 15:25:34.056 +00:00 [WRN] No XML encryptor configured. Key {a231546b-ccff-43e5-82c3-8608528aebe1} may be persisted to storage in unencrypted form.
+2024-05-24 15:25:34.310 +00:00 [INF] Now listening on: http://[::]:8080
+2024-05-24 15:25:34.310 +00:00 [INF] Now listening on: https://[::]:8081
+2024-05-24 15:25:34.313 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 15:25:34.313 +00:00 [INF] Hosting environment: Development
+2024-05-24 15:25:34.314 +00:00 [INF] Content root path: /app
+2024-05-24 15:25:34.803 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/index.html - null null
+2024-05-24 15:25:35.048 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/index.html - 200 null text/html;charset=utf-8 248.1656ms
+2024-05-24 15:25:35.127 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - null null
+2024-05-24 15:25:35.273 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.4007ms
+2024-05-24 15:25:53.294 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/index.html - null null
+2024-05-24 15:25:53.363 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/index.html - 200 null text/html;charset=utf-8 68.7235ms
+2024-05-24 15:25:53.375 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/swagger-ui.css - null null
+2024-05-24 15:25:53.438 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/swagger-ui-bundle.js - null null
+2024-05-24 15:25:53.438 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/swagger-ui-standalone-preset.js - null null
+2024-05-24 15:25:53.560 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-05-24 15:25:53.561 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/swagger-ui.css - 200 143943 text/css 186.0262ms
+2024-05-24 15:25:53.573 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-05-24 15:25:53.575 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 157.5689ms
+2024-05-24 15:25:53.655 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-05-24 15:25:53.656 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 238.8207ms
+2024-05-24 15:25:53.852 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - null null
+2024-05-24 15:25:53.874 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/favicon-32x32.png - null null
+2024-05-24 15:25:53.875 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-05-24 15:25:53.877 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/favicon-32x32.png - 200 628 image/png 2.0045ms
+2024-05-24 15:25:53.887 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.6462ms
+2024-05-24 15:29:08.642 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-05-24 15:29:08.679 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-05-24 15:29:08.690 +00:00 [INF] Creating key {bf021325-6ee2-42e1-975c-24e9f9be85f7} with creation date 2024-05-24 15:29:08Z, activation date 2024-05-24 15:29:08Z, and expiration date 2024-08-22 15:29:08Z.
+2024-05-24 15:29:08.708 +00:00 [WRN] No XML encryptor configured. Key {bf021325-6ee2-42e1-975c-24e9f9be85f7} may be persisted to storage in unencrypted form.
+2024-05-24 15:29:08.941 +00:00 [INF] Now listening on: http://[::]:8080
+2024-05-24 15:29:08.941 +00:00 [INF] Now listening on: https://[::]:8081
+2024-05-24 15:29:08.943 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 15:29:08.944 +00:00 [INF] Hosting environment: Development
+2024-05-24 15:29:08.944 +00:00 [INF] Content root path: /app
+2024-05-24 15:29:14.023 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/index.html - null null
+2024-05-24 15:29:14.303 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/index.html - 200 null text/html;charset=utf-8 283.2729ms
+2024-05-24 15:29:14.380 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - null null
+2024-05-24 15:29:14.501 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32768/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.4953ms
+2024-05-24 19:01:58.068 +02:00 [INF] User profile is available. Using 'C:\Users\goska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 19:01:58.732 +02:00 [INF] Now listening on: http://0.0.0.0:80
+2024-05-24 19:01:58.734 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 19:01:58.735 +02:00 [INF] Hosting environment: Development
+2024-05-24 19:01:58.735 +02:00 [INF] Content root path: C:\Users\goska\Desktop\QuizloDocker\Quizloo\Quizlo.APP\Quizlo.API
+2024-05-24 19:02:31.871 +02:00 [INF] User profile is available. Using 'C:\Users\goska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 19:02:32.321 +02:00 [INF] Now listening on: http://0.0.0.0:80
+2024-05-24 19:02:32.327 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 19:02:32.328 +02:00 [INF] Hosting environment: Development
+2024-05-24 19:02:32.329 +02:00 [INF] Content root path: C:\Users\goska\Desktop\QuizloDocker\Quizloo\Quizlo.APP\Quizlo.API
+2024-05-24 19:03:15.529 +02:00 [INF] User profile is available. Using 'C:\Users\goska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 19:03:15.770 +02:00 [INF] Now listening on: http://0.0.0.0:80
+2024-05-24 19:03:15.773 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 19:03:15.774 +02:00 [INF] Hosting environment: Development
+2024-05-24 19:03:15.775 +02:00 [INF] Content root path: C:\Users\goska\Desktop\QuizloDocker\Quizloo\Quizlo.APP\Quizlo.API
+2024-05-24 19:03:33.552 +02:00 [INF] User profile is available. Using 'C:\Users\goska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 19:03:33.718 +02:00 [INF] Now listening on: http://0.0.0.0:80
+2024-05-24 19:03:33.720 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 19:03:33.721 +02:00 [INF] Hosting environment: Development
+2024-05-24 19:03:33.722 +02:00 [INF] Content root path: C:\Users\goska\Desktop\QuizloDocker\Quizloo\Quizlo.APP\Quizlo.API
+2024-05-24 19:03:52.879 +02:00 [INF] User profile is available. Using 'C:\Users\goska\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-24 19:03:52.970 +02:00 [INF] Now listening on: http://0.0.0.0:80
+2024-05-24 19:03:52.972 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-24 19:03:52.972 +02:00 [INF] Hosting environment: Development
+2024-05-24 19:03:52.973 +02:00 [INF] Content root path: C:\Users\goska\Desktop\QuizloDocker\Quizloo\Quizlo.APP\Quizlo.API

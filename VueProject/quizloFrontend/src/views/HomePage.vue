@@ -24,28 +24,28 @@ export default {
 
 
 .fancy-font {
-  font-family: 'Lobster', cursive; /* Use Lobster font */
-  font-size: 6rem; /* Adjust the font size as needed */
+  font-family: 'Lobster', cursive;
+  font-size: 6rem;
   text-align: center;
-  margin-top: 70px; /* Adjust the top margin as needed */
-  color: #3C89AA; /* Adjust the font color as needed */
-  /* Add any additional styling here to enhance the chic look */
+  margin-top: 70px;
+  color: #3C89AA;
+
 }
 .text-body-secondary {
-  font-family: 'Lobster', cursive; /* Use Lobster font */
-  font-size: 3rem; /* Adjust the font size as needed */
-  color: #3e6d83 !important; /* Set the text color to blue */
-  /* Add any additional styling here to enhance the chic look */
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  color: #3e6d83 !important;
+
 }
 
 
 /* Adjustments for responsiveness */
 @media (max-width: 768px) {
   .fancy-font {
-    font-size: 4rem; /* Adjust font size for smaller screens */
+    font-size: 4rem;
   }
   .text-body-secondary {
-    font-size: 2rem; /* Adjust font size for smaller screens */
+    font-size: 2rem;
   }
 }
 

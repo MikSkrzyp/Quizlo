@@ -2,10 +2,12 @@ import { defineStore } from 'pinia'
 import Cookies from 'js-cookie'
 import axios from './axios'
 import {jwtDecode} from 'jwt-decode'
+import {API_URL} from "@/stores/config.js";
 
 export const useAuthStore = defineStore({
   id: 'auth',
   state: () => {
+    const url = import.meta.env.VITE_API_URL;
     const token = Cookies.get('token') || null;
     let user = null;
     if (token) {
@@ -15,6 +17,7 @@ export const useAuthStore = defineStore({
       token: token,
       error: null,
       user: user,
+        url: url,
     }
   },
   getters: {
@@ -45,7 +48,7 @@ export const useAuthStore = defineStore({
     },
     async login(credentials) {
       try {
-        const response = await axios.post('https://localhost:7244/api/Authentification/login', credentials)
+        const response = await axios.post(`${API_URL}/api/Authentification/login`, credentials)
         if (response.status !== 200) {
           throw new Error('Bad credentials')
         }
@@ -56,19 +59,19 @@ export const useAuthStore = defineStore({
         return false
       }
     },
-    async register(userDetails) {
-      try {
-        const response = await axios.post('https://localhost:7244/api/Authentification/register', userDetails)
-        if (response.status !== 200) {
-          throw new Error('Registration failed')
-        }
-        this.setToken(response.data.token)
-        return true
-      } catch (error) {
-        this.error = error.message
-        return false
-      }
-    },
+    // async register(userDetails) {
+    //   try {
+    //     const response = await axios.post('https://localhost:7244/api/Authentification/register', userDetails)
+    //     if (response.status !== 200) {
+    //       throw new Error('Registration failed')
+    //     }
+    //     this.setToken(response.data.token)
+    //     return true
+    //   } catch (error) {
+    //     this.error = error.message
+    //     return false
+    //   }
+    // },
     logOut() {
       this.clearToken()
     },

@@ -2,6 +2,7 @@
 import { ref, reactive, onMounted } from 'vue';
 import axios from '../stores/axios.js';
 import { useRoute } from 'vue-router';
+import {API_URL} from "@/stores/config.js";
 
 const route = useRoute();
 const quiz = reactive({
@@ -11,10 +12,11 @@ const quiz = reactive({
 const questions = ref([]);
 const loaded = ref(false);
 
+
 const fetchQuestions = async () => {
   try {
     const quizId = route.params.id;
-    const response = await axios.get(`https://localhost:7244/api/Questions/quiz/${quizId}/Question/GetAllQuestionsById`);
+    const response = await axios.get(`${API_URL}/api/Questions/quiz/${quizId}/Question/GetAllQuestionsById`);
     questions.value = response.data;
     fetchQuizDetails(quizId);
   } catch (error) {
@@ -26,7 +28,7 @@ const fetchQuestions = async () => {
 
 const fetchQuizDetails = async (quizId) => {
   try {
-    const response = await axios.get(`https://localhost:7244/api/Quiz/ReadOneQuiz/${quizId}`);
+    const response = await axios.get(`${API_URL}/api/Quiz/ReadOneQuiz/${quizId}`);
     quiz.title = response.data.title;
     quiz.description = response.data.description;
     loaded.value = true;
@@ -57,7 +59,7 @@ const updateQuiz = async () => {
       title: quiz.title,
       description: quiz.description
     };
-    await axios.put(`https://localhost:7244/api/Quiz/UpdateOneQuiz/${quizId}`, quizData);
+    await axios.put(`${API_URL}/api/Quiz/UpdateOneQuiz/${quizId}`, quizData);
     console.log('Quiz updated successfully!');
   } catch (error) {
     console.error('Failed to update quiz:', error);
@@ -76,7 +78,7 @@ const updateQuestion = async (question) => {
     }))
   };
   try {
-    await axios.put(`https://localhost:7244/api/Questions/${question.questionID}`, questionData);
+    await axios.put(`${API_URL}/api/Questions/${question.questionID}`, questionData);
     console.log('Question updated successfully!');
   } catch (error) {
     console.error('Failed to update question:', error);

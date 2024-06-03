@@ -63,17 +63,17 @@
 
 <style scoped>
 .fancy-font {
-  font-family: 'Lobster', cursive; /* Use Lobster font */
-  font-size: 6rem; /* Adjust the font size as needed */
+  font-family: 'Lobster', cursive;
+  font-size: 6rem;
   text-align: center;
-  margin-top: 50px; /* Adjust the top margin as needed */
-  color: #3C89AA; /* Adjust the font color as needed */
-  /* Add any additional styling here to enhance the chic look */
+  margin-top: 50px;
+  color: #3C89AA;
+
 }
 
 @media (max-width: 768px) {
   .fancy-font {
-    font-size: 4rem; /* Adjust font size for smaller screens */
+    font-size: 4rem;
   }
 }
 .text-shadow-bottom {
@@ -81,7 +81,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Add shadow to text */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 </style>
 

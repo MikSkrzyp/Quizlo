@@ -1,0 +1,44 @@
+version: '3.8'
+
+networks:
+  quizlo-network:
+
+volumes:
+  db-data:  # Define the named volume
+
+services:
+  quizlo-api:
+    build:
+      context: ./Quizlo.APP/Quizlo.API
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"   # Host port mapping
+    depends_on:
+      - db
+    networks:
+      - quizlo-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=QuizloDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=YourStrong!Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    networks:
+      - quizlo-network
+    volumes:
+      - db-data:/var/opt/mssql  # Mount the named volume
+
+  vue-app:
+    build:
+      context: ./VueProject/quizloFrontend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - quizlo-network
+    

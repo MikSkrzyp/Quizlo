@@ -1,17 +1,24 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
+//import axios from 'axios';
+import axios from '../stores/axios.js'
 import QuizCard from '@/components/QuizCard.vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '@/stores/users.js';
+import {API_URL} from "@/stores/config.js";
+
 
 const quizzes = ref([]);
 const router = useRouter();
 const authStore = useAuthStore();
 
+
+
+
+
 const fetchQuizzes = async () => {
   try {
-    const response = await axios.get('https://localhost:7244/api/Quiz/ReadAllQuizzes');
+    const response = await axios.get(`${API_URL}/api/Quiz/ReadAllQuizzes`);
     quizzes.value = response.data;
   } catch (error) {
     console.error('Failed to fetch quizzes:', error);
@@ -23,7 +30,7 @@ const deleteQuiz = async (quizId) => {
   if (!confirm('Are you sure you want to delete this quiz?')) return;
 
   try {
-    await axios.delete(`https://localhost:7244/api/Quiz/DeleteOneQuiz/${quizId}`);
+    await axios.delete(`${API_URL}/api/Quiz/DeleteOneQuiz/${quizId}`);
     quizzes.value = quizzes.value.filter(quiz => quiz.id !== quizId);
     alert('Quiz successfully deleted!');
     window.location.reload();

@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, ref } from 'vue';
 import axios from '../stores/axios.js';
-
+import {API_URL} from "@/stores/config.js";
 const quiz = reactive({
   title: '',
   description: '',
@@ -36,13 +36,13 @@ function removeAnswer(qIndex, aIndex) {
 async function submitQuiz() {
   try {
     // Assuming the quiz is created and you have the quizID
-    const quizResponse = await axios.post('https://localhost:7244/api/Quiz/CreateOneQuiz', {
+    const quizResponse = await axios.post(`${API_URL}/api/Quiz/CreateOneQuiz`, {
       title: quiz.title,
       description: quiz.description
     });
     const quizID = quizResponse.data;
     for (const question of quiz.questions) {
-      await axios.post('https://localhost:7244/api/Questions', {
+      await axios.post(`${API_URL}/api/Questions`, {
         quizID: quizID,
         ...question
       });

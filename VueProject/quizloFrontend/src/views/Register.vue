@@ -1,11 +1,14 @@
 <script setup>
 import {ref, computed} from 'vue';
+import router from "@/router/index.js";
+import {API_URL} from "@/stores/config.js";
 
 const firstName = ref('');
 const lastName = ref('');
 const email = ref('');
 const password = ref('');
 const errorMessage = ref('');
+
 
 // Basic email validation
 const isValidEmail = computed(() => {
@@ -44,7 +47,7 @@ const registerUser = async () => {
   };
 
   try {
-    const response = await fetch('https://localhost:7244/api/Authentification/register', {
+    const response = await fetch(`${API_URL}/api/Authentification/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +57,7 @@ const registerUser = async () => {
 
     if (response.ok) {
       alert('Registration successful! Redirecting to login...');
-      window.location.href = '/'; // Adjust as needed for your routing
+      await router.push('/login') // Adjust as needed for your routing
     } else {
       throw new Error('Failed to register, probably email that you entered is already in our database');
     }

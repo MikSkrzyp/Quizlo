@@ -29,13 +29,7 @@ namespace Quizlo.API.Repositories
         }
 
 
-        public async Task<string> CreateRefreshToken()
-        {
-            await _userManager.RemoveAuthenticationTokenAsync(_user, _loginProvider, _refreshToken);
-            var newRefreshToken = await _userManager.GenerateUserTokenAsync(_user, _loginProvider, _refreshToken);
-            var result = await _userManager.SetAuthenticationTokenAsync(_user, _loginProvider, _refreshToken, newRefreshToken);
-            return newRefreshToken;
-        }
+     
 
         public async Task<TokenDto> Login(LoginDto loginDto)
         {
@@ -52,7 +46,7 @@ namespace Quizlo.API.Repositories
             {
                 Token = token,
                 UserId = _user.Id,
-                RefreshToken = await CreateRefreshToken()
+              
             };
 
         }
@@ -74,34 +68,7 @@ namespace Quizlo.API.Repositories
             return result.Errors;
         }
 
-        public async Task<TokenDto> VerifyRefreshToken(TokenDto request)
-        {
-            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
-            var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(request.Token);
-            var username = tokenContent.Claims.ToList().FirstOrDefault(q => q.Type == JwtRegisteredClaimNames.Email)?.Value;
-            _user = await _userManager.FindByNameAsync(username);
-
-            if (_user == null || _user.Id != request.UserId)
-            {
-                return null;
-            }
-
-            var isValidRefreshToken = await _userManager.VerifyUserTokenAsync(_user, _loginProvider, _refreshToken, request.RefreshToken);
-
-            if (isValidRefreshToken)
-            {
-                var token = await GenerateToken();
-                return new TokenDto
-                {
-                    Token = token,
-                    UserId = _user.Id,
-                    RefreshToken = await CreateRefreshToken()
-                };
-            }
-
-            await _userManager.UpdateSecurityStampAsync(_user);
-            return null;
-        }
+      
 
         private async Task<string> GenerateToken()
         {

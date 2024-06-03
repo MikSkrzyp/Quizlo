@@ -84,9 +84,9 @@ setDarkMode();
 
 
 <style scoped>
-/* Add padding to create space between navbar and content below */
+
 .navbar {
-  padding-bottom: 20px; /* Adjust as needed */
+  padding-bottom: 20px;
 }
 
 .btn-outline-light:hover {

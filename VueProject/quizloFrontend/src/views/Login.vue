@@ -16,9 +16,7 @@ const attemptLogin = async () => {
   }
 };
 
-const register = async () => {
-  await auth.register({ email: email.value, password: password.value });
-};
+
 </script>
 
 <template>
