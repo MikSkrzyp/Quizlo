@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Data;
 using Quizlo.API.Model.Domain;
 using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Quizlo.API.Controllers
 {
@@ -17,7 +19,7 @@ namespace Quizlo.API.Controllers
         private readonly IMapper mapper;
         private readonly IUserRepository userRepository;
 
-        public UserController(QuizloDbContext dbContext,IMapper mapper,IUserRepository userRepository)
+        public UserController(QuizloDbContext dbContext, IMapper mapper, IUserRepository userRepository)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
@@ -28,32 +30,70 @@ namespace Quizlo.API.Controllers
         [Route("ReadAllUsers")]
         public async Task<IActionResult> GetAll()
         {
-            var usersDomain = await userRepository.GetAllAsync();
-            //throw new Exception("blad");
-            return Ok(mapper.Map<List<GetUserDTO>>(usersDomain));
+            try
+            {
+                var usersDomain = await userRepository.GetAllAsync();
+                return Ok(mapper.Map<List<GetUserDTO>>(usersDomain));
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your get all users request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpGet("ReadOneUser/{id}")]
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
-            var userDomain = await userRepository.GetByIdAsync(id);
-            if (userDomain == null)
+            try
             {
-                return NotFound();
-            }
+                var userDomain = await userRepository.GetByIdAsync(id);
+                if (userDomain == null)
+                {
+                    return NotFound();
+                }
 
-            return Ok(mapper.Map<GetUserDTO>(userDomain));
+                return Ok(mapper.Map<GetUserDTO>(userDomain));
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your get user by id request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpDelete("DeleteOneUser/{id}")]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
-            var userDomain = await userRepository.DeleteAsync(id);
-            if (userDomain == null)
+            try
             {
-                return NotFound();
+                var userDomain = await userRepository.DeleteAsync(id);
+                if (userDomain == null)
+                {
+                    return NotFound();
+                }
+                return Ok("Deleted");
             }
-            return Ok("Deleted");
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your delete user request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
     }
 }

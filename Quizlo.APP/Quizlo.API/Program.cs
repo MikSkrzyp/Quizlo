@@ -112,12 +112,12 @@ if (app.Environment.IsDevelopment())
 }
 
 // Ensure database is created and migrations are applied
-using (var scope = app.Services.CreateScope())
+/*using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<QuizloDbContext>();
     context.Database.Migrate(); // Apply migrations, use EnsureCreated() for a simple database creation
-}
+}*/
 
 app.UseMiddleware<GlobalExceptionHandling>();
 
@@ -130,4 +130,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://0.0.0.0:80");
+//app.Run("http://0.0.0.0:80");
+app.Run();

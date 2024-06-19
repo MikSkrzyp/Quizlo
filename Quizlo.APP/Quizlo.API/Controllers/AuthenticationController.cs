@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Quizlo.API.Controllers
 {
@@ -24,18 +27,31 @@ namespace Quizlo.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> Register([FromBody] UserDto userDTO)
         {
-            var errors = await _authManager.Register(userDTO);
-
-            if (errors.Any())
+            try
             {
-                foreach (var error in errors)
-                {
-                    ModelState.AddModelError(error.Code, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
+                var errors = await _authManager.Register(userDTO);
 
-            return Ok();
+                if (errors.Any())
+                {
+                    foreach (var error in errors)
+                    {
+                        ModelState.AddModelError(error.Code, error.Description);
+                    }
+                    return BadRequest(ModelState);
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your register request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         // POST: api/Account/login
@@ -46,15 +62,27 @@ namespace Quizlo.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> Login([FromBody] LoginDto loginDTO)
         {
-            var authResponse = await _authManager.Login(loginDTO);
-
-            if (authResponse == null)
+            try
             {
-                return Unauthorized();
+                var authResponse = await _authManager.Login(loginDTO);
+
+                if (authResponse == null)
+                {
+                    return Unauthorized();
+                }
+
+                return Ok(authResponse);
             }
-
-            return Ok(authResponse);
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your login request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
-
     }
 }

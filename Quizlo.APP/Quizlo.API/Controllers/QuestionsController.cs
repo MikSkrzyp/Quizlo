@@ -5,6 +5,7 @@ using Quizlo.API.Model.DTOs;
 using Quizlo.API.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System;
 
 namespace Quizlo.API.Controllers
 {
@@ -28,111 +29,168 @@ namespace Quizlo.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            // Mapping DTO to Entity
-            var question = new Question
+            try
             {
-
-                QuizID = questionDTO.QuizID,
-                QuestionText = questionDTO.QuestionText,
-                QuestionType = questionDTO.QuestionType,
-                
-            };
-
-            
-
-            foreach (var answerDto in questionDTO.Answers)
-            {
-                question.Answers.Add(new Answer
+                // Mapping DTO to Entity
+                var question = new Question
                 {
-                    AnswerText = answerDto.AnswerText,
-                    IsCorrect = answerDto.IsCorrect
-                });
+                    QuizID = questionDTO.QuizID,
+                    QuestionText = questionDTO.QuestionText,
+                    QuestionType = questionDTO.QuestionType,
+                };
+
+                foreach (var answerDto in questionDTO.Answers)
+                {
+                    question.Answers.Add(new Answer
+                    {
+                        AnswerText = answerDto.AnswerText,
+                        IsCorrect = answerDto.IsCorrect
+                    });
+                }
+
+                // Add question to repository
+                await _questionRepository.AddQuestionAsync(question);
+
+                return CreatedAtAction(nameof(GetQuestion), new { id = question.QuestionID }, question);
             }
-
-            // Add question to repository
-            await _questionRepository.AddQuestionAsync(question);
-
-            return CreatedAtAction(nameof(GetQuestion), new { id = question.QuestionID }, question);
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your post question request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Question>> GetQuestion(int id)
         {
-            var question = await _questionRepository.GetQuestionByIdAsync(id);
-
-            if (question == null)
+            try
             {
-                return NotFound();
-            }
+                var question = await _questionRepository.GetQuestionByIdAsync(id);
 
-            return question;
+                if (question == null)
+                {
+                    return NotFound();
+                }
+
+                return question;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your get question request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpGet("quiz/{quizId}/Question/GetAllQuestionsById")]
         public async Task<ActionResult<IEnumerable<Question>>> GetAllQuestionsByQuizId(int quizId)
         {
-            var questions = await _questionRepository.GetAllQuestionsByQuizIdAsync(quizId);
-
-            if (questions == null || !questions.Any())
+            try
             {
-                return NotFound();
-            }
+                var questions = await _questionRepository.GetAllQuestionsByQuizIdAsync(quizId);
 
-            return Ok(questions);
+                if (questions == null || !questions.Any())
+                {
+                    return NotFound();
+                }
+
+                return Ok(questions);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your get all questions by id request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
-            var questionToDelete = await _questionRepository.GetQuestionByIdAsync(id);
-
-            if (questionToDelete == null)
+            try
             {
-                return NotFound();
+                var questionToDelete = await _questionRepository.GetQuestionByIdAsync(id);
+
+                if (questionToDelete == null)
+                {
+                    return NotFound();
+                }
+
+                await _questionRepository.DeleteQuestionAsync(id);
+
+                return NoContent();
             }
-
-            await _questionRepository.DeleteQuestionAsync(id);
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your delete question request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
-        
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PutQuestion(int id, [FromBody] QuestionDTO questionDTO)
         {
-           
-
-            var questionToUpdate = await _questionRepository.GetQuestionByIdAsync(id);
-
-            if (questionToUpdate == null)
+            try
             {
-                return NotFound();
-            }
+                var questionToUpdate = await _questionRepository.GetQuestionByIdAsync(id);
 
-            // Update question properties
-            questionToUpdate.QuestionText = questionDTO.QuestionText;
-            questionToUpdate.QuestionType = questionDTO.QuestionType;
-
-            // Delete all existing answers
-            questionToUpdate.Answers.Clear();
-
-            // Add new answers
-            foreach (var answerDto in questionDTO.Answers)
-            {
-                questionToUpdate.Answers.Add(new Answer
+                if (questionToUpdate == null)
                 {
-                    AnswerText = answerDto.AnswerText,
-                    IsCorrect = answerDto.IsCorrect
-                });
+                    return NotFound();
+                }
+
+                // Update question properties
+                questionToUpdate.QuestionText = questionDTO.QuestionText;
+                questionToUpdate.QuestionType = questionDTO.QuestionType;
+
+                // Delete all existing answers
+                questionToUpdate.Answers.Clear();
+
+                // Add new answers
+                foreach (var answerDto in questionDTO.Answers)
+                {
+                    questionToUpdate.Answers.Add(new Answer
+                    {
+                        AnswerText = answerDto.AnswerText,
+                        IsCorrect = answerDto.IsCorrect
+                    });
+                }
+
+                // Update question in repository
+                await _questionRepository.UpdateQuestionAsync(questionToUpdate);
+
+                return NoContent();
             }
-
-            // Update question in repository
-            await _questionRepository.UpdateQuestionAsync(questionToUpdate);
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                // Log the exception here if necessary
+                var errorResponse = new
+                {
+                    code = "500",
+                    message = "An error occurred while processing your update question request."
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
-
     }
 }
